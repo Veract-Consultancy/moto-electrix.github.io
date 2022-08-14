@@ -86,7 +86,7 @@
 
 @font-face {
   font-family: Exo;
-  src: url(fonts/Exo/Exo2-Regular.otf) format("opentype");
+  src: url(fonts/Exo/Exo2-Light.otf) format("opentype");
 }
 
 *,
@@ -144,15 +144,23 @@ body {
   font-size: 0.625rem;
 }
 
+.mb-n1 {
+  margin-bottom: -0.875rem;
+}
+
+.ev-title {
+  color: rgba(80, 208, 116, 1);
+}
+
 @keyframes float {
   0% {
-    transform: translatey(100px);
+    transform: translatey(60px);
   }
   50% {
     transform: translatey(0px);
   }
   100% {
-    transform: translatey(100px);
+    transform: translatey(60px);
   }
 }
 
@@ -162,7 +170,7 @@ body {
 }
 
 .vehicle-pilot-float {
-  padding-top: 100px;
+  padding-top: 60px;
   animation: float 4s infinite;
 }
 
@@ -253,7 +261,7 @@ body {
 }
 
 input:focus ~ .floating-label,
-input:not(:focus):valid ~ .floating-label{
+input:not(:focus):valid ~ .floating-label {
   top: 8px;
   bottom: 10px;
   left: 20px;
