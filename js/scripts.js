@@ -3,7 +3,7 @@ const productContentTemplate =
     `<div class="col">
         <div class="border rounded-4 product-group">
             <div class="py-5">
-                <img loading="lazy"
+                <img
                     src="{imagePath}"
                     class="d-block w-100" alt="...">
             </div>
