@@ -333,3 +333,17 @@ input:not(:focus):valid ~ .floating-label {
 .home-banner-image-3 {
   background-image: url("../assets/img/home/banner3.jpg");
 }
+
+#recaptchaId {
+  -moz-transform: scale(0.77);
+  -ms-transform: scale(0.77);
+  -o-transform: scale(0.77);
+  -moz-transform-origin: 0;
+  -ms-transform-origin: 0;
+  -o-transform-origin: 0;
+  -webkit-transform: scale(0.77);
+  transform: scale(0.77);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0;
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.77,M12=0,M21=0,M22=0.77,SizingMethod='auto expand');
+}
