@@ -229,6 +229,11 @@ body {
   border-color: rgba(49, 48, 48, 1) !important;
 }
 
+.distinctiveproduts .carousel-inner {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
 #installationservices {
   background-image: url("../assets/img/installationservice/banner.png");
   background-repeat: no-repeat;
