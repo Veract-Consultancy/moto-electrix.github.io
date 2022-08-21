@@ -74,7 +74,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #6fc216;
-  --bs-body-bg: #fff;
+  --bs-body-bg: rgba(3, 30, 34, 255);
   --me-accent-color: #6fc216;
   --me-accent-active-color: #ffc000e8;
 }
@@ -196,7 +196,7 @@ body {
   border-color: var(--me-accent-active-color);
 }
 
-#distinctiveproduts {
+.distinctiveproduts {
   background-image: url("../assets/img/distinctiveproducts/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -204,27 +204,27 @@ body {
   background-position: center;
 }
 
-#distinctiveproduts .accordion-item {
+.distinctiveproduts .accordion-item {
   background-color: transparent;
   color: var(--me-accent-color);
   border: none;
 }
 
-#distinctiveproduts .accordion-button {
+.distinctiveproduts .accordion-button {
   background-color: rgba(60, 60, 60, 0.61);
   box-shadow: none;
 }
 
-#distinctiveproduts .accordion-button::after {
+.distinctiveproduts .accordion-button::after {
   background-image: none;
 }
 
-#distinctiveproduts .product-group {
+.distinctiveproduts .product-group {
   background-color: rgba(0, 0, 0, 0.5);
   border-color: rgba(74, 74, 74, 1) !important;
 }
 
-#distinctiveproduts .product-text {
+.distinctiveproduts .product-text {
   background-color: rgba(19, 19, 19, 1);
   border-color: rgba(49, 48, 48, 1) !important;
 }
@@ -294,4 +294,37 @@ input:not(:focus):valid ~ .floating-label {
 
 #footerLinks {
   background: rgba(3, 31, 35);
+}
+
+#landingVideo {
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+}
+
+#product-desktop .home-carousel-content {
+  padding-top: 20%;
+}
+
+.mobile-balls {
+  height: 100px;
+}
+
+#homeCarousel-mobile {
+  height: 600px;
+}
+
+.home-banner {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: fill;
+}
+.home-banner-image-1 {
+  background-image: url("../assets/img/home/banner3.jpg");
+}
+.home-banner-image-2 {
+  background-image: url("../assets/img/home/banner3.jpg");
+}
+.home-banner-image-3 {
+  background-image: url("../assets/img/home/banner3.jpg");
 }

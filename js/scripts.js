@@ -54,6 +54,10 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+
+    // Add distinctive product content to the page
+    
+
 });
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
