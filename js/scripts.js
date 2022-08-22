@@ -1,8 +1,15 @@
-if (window.innerWidth >= 1200) {
-    document.getElementById('video-container').innerHTML = `<video id="landingVideo" autoplay muted loop>
+var isVideoAdded = false;
+
+function addVideo() {
+    if (window.innerWidth >= 1200 && !isVideoAdded) {
+        document.getElementById('video-container').innerHTML = `<video id="landingVideo" autoplay muted loop>
             <source src="assets/video/video-dark.mp4" type="video/mp4" />
-        </video>`
+        </video>`;
+        isVideoAdded = true;
+    }
 }
+
+addVideo();
 
 // Add distinctive product content to the page
 const productContentTemplate =
@@ -153,7 +160,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
     AddProducts();
 
-    addEventListener('resize', _ => AddProducts());
+    addEventListener('resize', _ => {
+        addVideo();
+        AddProducts()
+    });
 });
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
