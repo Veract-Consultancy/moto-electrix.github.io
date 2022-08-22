@@ -1,3 +1,9 @@
+if (window.innerWidth >= 1200) {
+    document.getElementById('video-container').innerHTML = `<video id="landingVideo" autoplay muted loop>
+            <source src="assets/video/video-dark.mp4" type="video/mp4" />
+        </video>`
+}
+
 // Add distinctive product content to the page
 const productContentTemplate =
     `<div class="col">

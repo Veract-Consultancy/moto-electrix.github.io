@@ -49,13 +49,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#products">Products</a>
+                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase"
+                            href="#distinctiveproduts">Products</a>
                     </li>
-                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#partners">Our
+                    <!-- <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#partners">Our
                             Partners</a></li>
                     <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#hostearn">Host &
                             Earn</a></li>
                     <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#evready">EV Ready</a>
+                    </li> -->
+                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#contacts">Contact
+                            Us</a>
                     </li>
                 </ul>
             </div>
@@ -64,13 +68,6 @@
 
     <!-- Video -->
     <section id="electric-video" class="vh-100 d-lg-block d-none">
-        <video id="landingVideo" autoplay muted loop>
-            <source src="assets/video/1074079172-preview.mp4" type="video/mp4" />
-        </video>
-    </section>
-
-    <!-- Products Desktop-->
-    <section id="product-desktop" class="position-relative d-lg-block d-none">
         <div class="position-absolute w-100 h-100 container-fluid pt-5" style="z-index: 1;">
             <div class="row">
                 <div class="col d-none d-lg-block">
@@ -96,6 +93,11 @@
                 </div>
             </div>
         </div>
+        <div id="video-container"></div>
+    </section>
+
+    <!-- Products Desktop-->
+    <section id="product-desktop" class="position-relative d-lg-block d-none">
         <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0"
@@ -269,7 +271,7 @@
     </section>
 
     <!-- DISTINCTIVE PRODUCTS-->
-    <section id="distinctiveproduts" class="distinctiveproduts">
+    <section id="distinctiveproduts" class="distinctiveproduts anchor-scroll">
         <nav class="navbar navbar-dark bg-dark w-100">
             <div class="container">
                 <span class="me-yellow-color mx-auto mb-">DISTINCTIVE PRODUCTS</span>
@@ -339,105 +341,107 @@
     </section> -->
 
     <!-- Contacts -->
-    <section id="contacts" class="pb-5 px-2">
+    <section id="contacts" class="pb-5 anchor-scroll">
         <nav class="navbar navbar-dark bg-dark w-100 mb-5">
             <div class="container">
                 <span class="me-yellow-color mx-auto mb-">CONTACT US</span>
             </div>
         </nav>
-        <div class="container p-3 border rounded contact-form-area">
-            <form action="https://formsubmit.co/ccb4d5c859355807d3b5b2611551bcc9" method="POST">
-                <div>
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="http://www.motoelectrix.in/">
-                    <input type="hidden" name="_subject" value="New Contact Message">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_autoresponse"
-                        value="Thank you for contacting us, we will get back to you soon!!">
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                <img loading="lazy" src="assets/img/contact/name_icon.png" alt=" " />
-                            </span>
-                            <div class="form-floating">
-                                <input type="text" class="form-control rounded-0" id="txtName" required name="name"
-                                    placeholder=" " value="" required>
-                                <label for="txtName">NAME</label>
-                                <div class="invalid-feedback">Please provide a valid name.</div>
-                            </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                <img loading="lazy" src="assets/img/contact/phone_icon.png" alt=" " />
-                            </span>
-                            <div class="form-floating">
-                                <input name="phone" type="text" class="form-control rounded-0" id="txtPhone"
-                                    placeholder=" " value="" required>
-                                <label for="txtPhone">PHONE</label>
-                                <div class="invalid-feedback">Please provide a valid phone.</div>
-                            </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                <img loading="lazy" src="assets/img/contact/mail_icon.png" alt=" " />
-                            </span>
-                            <div class="form-floating">
-                                <input name="email" type="text" class="form-control rounded-0" id="txtEmail"
-                                    placeholder=" " value="" required>
-                                <label for="txtEmail">E-MAIL</label>
-                                <div class="invalid-feedback">Please provide a valid email.</div>
-                            </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                <img loading="lazy" src="assets/img/contact/org_icon.png" alt=" " />
-                            </span>
-                            <div class="form-floating">
-                                <input name="organisation" type="text" class="form-control rounded-0" id="txtOrg"
-                                    placeholder=" " value="" required>
-                                <label for="txtOrg">ORGANISATION</label>
-                                <div class="invalid-feedback">Please provide a valid organisation.</div>
-                            </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                <img loading="lazy" src="assets/img/contact/requirement_icon.png" alt=" " />
-                            </span>
-                            <div class="form-floating">
-                                <input name="requirement" type="text" class="form-control rounded-0" id="txtRequirement"
-                                    placeholder=" " value="" required>
-                                <label for="txtRequirement">REQUIREMENT</label>
-                                <div class="invalid-feedback">Please provide a valid requirement.</div>
-                            </div>
-                        </div>
+        <div class="px-2">
+            <div class="container p-3 border rounded contact-form-area">
+                <form action="https://formsubmit.co/ccb4d5c859355807d3b5b2611551bcc9" method="POST">
+                    <div>
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="http://www.motoelectrix.in/">
+                        <input type="hidden" name="_subject" value="New Contact Message">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_autoresponse"
+                            value="Thank you for contacting us, we will get back to you soon!!">
                     </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="mb-3">
-                            <div class="form-floating">
-                                <textarea name="message" type="text" class="form-control rounded-0" id="txtRemarks"
-                                    placeholder=" " value="" style="height: 175px;"></textarea>
-                                <label for="txtRemarks">REMARKS</label>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg">
+                                    <img loading="lazy" src="assets/img/contact/name_icon.png" alt=" " />
+                                </span>
+                                <div class="form-floating">
+                                    <input type="text" class="form-control rounded-0" id="txtName" required name="name"
+                                        placeholder=" " value="" required>
+                                    <label for="txtName">NAME</label>
+                                    <div class="invalid-feedback">Please provide a valid name.</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg pt-1">
-                                <img loading="lazy" src="assets/img/contact/secure_icon.png" alt=" " />
-                            </span>
-                            <div class="form-control rounded-0 px-1">
-                                <div id="recaptchaId" class="g-recaptcha">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg">
+                                    <img loading="lazy" src="assets/img/contact/phone_icon.png" alt=" " />
+                                </span>
+                                <div class="form-floating">
+                                    <input name="phone" type="text" class="form-control rounded-0" id="txtPhone"
+                                        placeholder=" " value="" required>
+                                    <label for="txtPhone">PHONE</label>
+                                    <div class="invalid-feedback">Please provide a valid phone.</div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg">
+                                    <img loading="lazy" src="assets/img/contact/mail_icon.png" alt=" " />
+                                </span>
+                                <div class="form-floating">
+                                    <input name="email" type="text" class="form-control rounded-0" id="txtEmail"
+                                        placeholder=" " value="" required>
+                                    <label for="txtEmail">E-MAIL</label>
+                                    <div class="invalid-feedback">Please provide a valid email.</div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg">
+                                    <img loading="lazy" src="assets/img/contact/org_icon.png" alt=" " />
+                                </span>
+                                <div class="form-floating">
+                                    <input name="organisation" type="text" class="form-control rounded-0" id="txtOrg"
+                                        placeholder=" " value="" required>
+                                    <label for="txtOrg">ORGANISATION</label>
+                                    <div class="invalid-feedback">Please provide a valid organisation.</div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg">
+                                    <img loading="lazy" src="assets/img/contact/requirement_icon.png" alt=" " />
+                                </span>
+                                <div class="form-floating">
+                                    <input name="requirement" type="text" class="form-control rounded-0"
+                                        id="txtRequirement" placeholder=" " value="" required>
+                                    <label for="txtRequirement">REQUIREMENT</label>
+                                    <div class="invalid-feedback">Please provide a valid requirement.</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-grid" style="height: 55px;">
-                            <button id="contactFormSubmit" type="submit" class="btn rounded-0 contact-send-message-btn"
-                                disabled type="button">SEND
-                                MESSAGE</button>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="mb-3">
+                                <div class="form-floating">
+                                    <textarea name="message" type="text" class="form-control rounded-0" id="txtRemarks"
+                                        placeholder=" " value="" style="height: 175px;"></textarea>
+                                    <label for="txtRemarks">REMARKS</label>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg pt-1">
+                                    <img loading="lazy" src="assets/img/contact/secure_icon.png" alt=" " />
+                                </span>
+                                <div class="form-control rounded-0 px-1">
+                                    <div id="recaptchaId" class="g-recaptcha">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-grid" style="height: 55px;">
+                                <button id="contactFormSubmit" type="submit"
+                                    class="btn rounded-0 contact-send-message-btn" disabled type="button">SEND
+                                    MESSAGE</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -448,11 +452,15 @@
                 <div class="col-lg-3 col-md-12">
                     <h5 class="me-border-bottom me-secondary-color d-inline mb-2">TALK TO US</h5>
                     <div class="mt-3">
-                        <p class="me-secondary-color">+91 44 23456789</p>
-                        <p>info@motoeletrix.com</p>
-                        <p class="me-secondary-color">#001, Main Street<br />
-                            Velacherry<br />
-                            Chennai - 600 000</p>
+                        <a class="text-decoration-none" href="tel:+919789991565">
+                            <p class="me-secondary-color">+91 9789991565</p>
+                        </a>
+                        <a class="text-decoration-none" href="mailto:info@motoeletrix.com">
+                            <p class="me-color">info@motoeletrix.com</p>
+                        </a>
+                        <p class="me-secondary-color">#17, First Street<br />
+                            Tansi Nagar, Velachery<br />
+                            Chennai - 600 042</p>
                     </div>
                 </div>
                 <!-- show only in desktop -->

@@ -178,6 +178,10 @@ body {
   border-bottom: 1px solid var(--me-accent-active-color);
 }
 
+.anchor-scroll {
+  scroll-margin-top: 35px;
+}
+
 .carousel-control-prev-icon {
   background-image: url("../assets/img/common/prev_icon.svg");
 }
@@ -308,7 +312,7 @@ input:not(:focus):valid ~ .floating-label {
 }
 
 #product-desktop .home-carousel-content {
-  padding-top: 20%;
+  padding-top: 5%;
 }
 
 .mobile-balls {
