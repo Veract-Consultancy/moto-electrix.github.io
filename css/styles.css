@@ -320,7 +320,7 @@ input:not(:focus):valid ~ .floating-label {
 }
 
 #homeCarousel-mobile {
-  height: 600px;
+  height: 450px;
 }
 
 .home-banner {
