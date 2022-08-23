@@ -329,13 +329,13 @@ input:not(:focus):valid ~ .floating-label {
   background-size: fill;
 }
 .home-banner-image-1 {
-  background-image: url("../assets/img/home/banner3.jpg");
+  background-image: url("../assets/img/home/EV_Charger_Controller_Slide.jpg");
 }
 .home-banner-image-2 {
-  background-image: url("../assets/img/home/banner3.jpg");
+  background-image: url("../assets/img/home/On_Board_Slide.jpg");
 }
 .home-banner-image-3 {
-  background-image: url("../assets/img/home/banner3.jpg");
+  background-image: url("../assets/img/home/EV_Charger_Slide.jpg");
 }
 
 #recaptchaId {
