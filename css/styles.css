@@ -263,7 +263,7 @@ body {
 }
 
 .distinctiveproduts .accordion-button {
-  background-color: rgba(60, 60, 60, 0.61);
+  background-color: rgba(38, 38, 38, 1);
   box-shadow: none;
 }
 
@@ -416,6 +416,9 @@ input:not(:focus):valid ~ .floating-label {
   }
   .anchor-scroll {
     scroll-margin-top: 90px !important;
+  }
+  .distinctiveproduts .accordion-button {
+    text-align: left;
   }
 }
 
