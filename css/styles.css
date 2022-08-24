@@ -117,9 +117,11 @@ body {
 .me-font {
   font-family: "PT Sans Narrow";
 }
+
 .me-secondary-font {
   font-family: "Exo";
 }
+
 .me-color {
   color: var(--bs-body-color) !important;
 }
@@ -187,6 +189,12 @@ body {
 
 .me-border-bottom {
   border-bottom: 1px solid var(--me-accent-active-color);
+}
+
+.mobile-hamburger-button {
+  border: none;
+  font-size: 3rem;
+  color: rgba(51, 97, 2, 1);
 }
 
 .anchor-scroll {
@@ -337,16 +345,29 @@ input:not(:focus):valid ~ .floating-label {
 .home-banner {
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-size: fill;
 }
 .home-banner-image-1 {
-  background-image: url("../assets/img/home/EV_Charger_Controller_Slide.jpg");
+  background-image: url("../assets/img/home/banner3.jpg");
 }
 .home-banner-image-2 {
   background-image: url("../assets/img/home/On_Board_Slide.jpg");
 }
 .home-banner-image-3 {
   background-image: url("../assets/img/home/EV_Charger_Slide.jpg");
+}
+
+@media screen and (max-width: 1200px) {
+  .home-banner-image-1 {
+    background-image: url("../assets/img/home/banner3.jpg");
+  }
+  .home-banner {
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position-x: 62%;
+  }
+  .anchor-scroll {
+    scroll-margin-top: 2.25rem;
+  }
 }
 
 #recaptchaId {
