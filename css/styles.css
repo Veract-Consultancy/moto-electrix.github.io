@@ -331,7 +331,7 @@ input:not(:focus):valid ~ .floating-label {
 }
 
 #product-desktop .home-carousel-content {
-  padding-top: 5%;
+  padding-top: 20%;
 }
 
 .mobile-balls {
