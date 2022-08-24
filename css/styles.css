@@ -412,7 +412,7 @@ input:not(:focus):valid ~ .floating-label {
     height: 300px;
     background-repeat: no-repeat;
     background-position-y: 80%;
-    background-size: 70% 70%;
+    background-size: auto 70%;
   }
   .anchor-scroll {
     scroll-margin-top: 90px !important;
