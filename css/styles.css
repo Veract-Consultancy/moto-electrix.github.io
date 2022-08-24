@@ -281,6 +281,14 @@ body {
   border-color: rgba(49, 48, 48, 1) !important;
 }
 
+.distinctiveproduts .product-text .title {
+  font-family: ExoBold;
+}
+
+.distinctiveproduts .product-text p {
+  color: rgba(217, 217, 217, 1);
+}
+
 .distinctiveproduts .carousel-inner {
   padding-left: 12%;
   padding-right: 12%;

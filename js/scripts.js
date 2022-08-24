@@ -22,7 +22,7 @@ const productContentTemplate =
             </div>
             <div
                 class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                <h6>{productName}</h6>
+                <h5 class="title mb-4">{productName}</h5>
                 <p class="fs-7">{productContent}</p>
             </div>
         </div>
