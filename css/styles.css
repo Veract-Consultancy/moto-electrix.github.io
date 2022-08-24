@@ -73,9 +73,9 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #6fc216;
+  --bs-body-color: rgba(111, 194, 22, 1);
   --bs-body-bg: rgba(3, 30, 34, 255);
-  --me-accent-color: #6fc216;
+  --me-accent-color: rgba(111, 194, 22, 1);
   --me-accent-active-color: #ffc000e8;
 }
 
@@ -164,14 +164,25 @@ body {
   }
 }
 
+@keyframes float-reverse {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(60px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
 .charger-float,
 .user-grounding-float {
   animation: float 4s infinite;
 }
 
 .vehicle-pilot-float {
-  padding-top: 60px;
-  animation: float 4s infinite;
+  animation: float-reverse 4s infinite;
 }
 
 .me-border-bottom {
