@@ -9,7 +9,7 @@ function addVideo() {
     }
 }
 
-addVideo();
+// addVideo();
 
 // Add distinctive product content to the page
 const productContentTemplate =
@@ -161,7 +161,7 @@ window.addEventListener('DOMContentLoaded', event => {
     AddProducts();
 
     addEventListener('resize', _ => {
-        addVideo();
+        // addVideo();
         AddProducts()
     });
 });

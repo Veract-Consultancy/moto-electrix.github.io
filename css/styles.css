@@ -89,6 +89,16 @@
   src: url(fonts/Exo/Exo2-Light.otf) format("opentype");
 }
 
+@font-face {
+  font-family: ExoBold;
+  src: url(fonts/Exo/Exo2-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: ExoItalic;
+  src: url(fonts/Exo/Exo2-Italic.otf) format("opentype");
+}
+
 *,
 *::before,
 *::after {
@@ -112,6 +122,15 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* body background image css */
+body {
+  background-image: url("../assets/img/distinctiveproducts/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .me-font {
@@ -148,10 +167,6 @@ body {
 
 .mb-n1 {
   margin-bottom: -0.875rem;
-}
-
-.ev-title {
-  color: rgba(80, 208, 116, 1);
 }
 
 @keyframes float {
@@ -199,6 +214,20 @@ body {
 
 .anchor-scroll {
   scroll-margin-top: 35px;
+}
+
+.home-product-text .ev-title {
+  color: rgba(80, 208, 116, 1);
+  font-family: ExoBold;
+}
+
+.home-product-text .ev-subtitle {
+  color: rgba(80, 208, 116, 1);
+}
+
+.home-product-text .ev-content {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Exo;
 }
 
 .carousel-control-prev-icon {
@@ -288,6 +317,14 @@ body {
   height: 40px;
 }
 
+.form-control {
+  background-color: #d9d9d9;
+}
+
+.form-floating > label {
+  color: rgba(38, 38, 38, 1);
+}
+
 input:focus ~ .floating-label,
 input:not(:focus):valid ~ .floating-label {
   top: 8px;
@@ -344,10 +381,12 @@ input:not(:focus):valid ~ .floating-label {
 
 .home-banner {
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: 70% 70%;
+  height: calc(100vh - 180px);
 }
 .home-banner-image-1 {
-  background-image: url("../assets/img/home/banner3.jpg");
+  background-image: url("../assets/img/home/3D_Model1.png");
 }
 .home-banner-image-2 {
   background-image: url("../assets/img/home/On_Board_Slide.jpg");
@@ -356,17 +395,19 @@ input:not(:focus):valid ~ .floating-label {
   background-image: url("../assets/img/home/EV_Charger_Slide.jpg");
 }
 
+.copyright-color {
+  color: rgba(114, 114, 114, 1);
+}
+
 @media screen and (max-width: 1200px) {
-  .home-banner-image-1 {
-    background-image: url("../assets/img/home/banner3.jpg");
-  }
   .home-banner {
+    height: 300px;
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position-x: 62%;
+    background-position-y: 80%;
+    background-size: 70% 70%;
   }
   .anchor-scroll {
-    scroll-margin-top: 2.25rem;
+    scroll-margin-top: 90px !important;
   }
 }
 
