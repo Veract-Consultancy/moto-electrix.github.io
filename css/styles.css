@@ -443,11 +443,50 @@ input:not(:focus):valid ~ .floating-label {
 
 .me-custom-transition .carousel-item {
   opacity: 0;
-  transition-property: opacity;
-  transform: none;
+  transform: rotateY(180deg) !important;
+  transition-property: opacity, transform !important;
+  backface-visibility: visible !important;
+  transition-duration: 0.5s !important;
 }
 
-.me-custom-transition .carousel-item.active {
+.me-custom-transition .carousel-item.active,
+.me-custom-transition .carousel-item-next.carousel-item-start,
+.me-custom-transition .carousel-item-prev.carousel-item-end {
+  transform: rotateY(360deg) !important;
   z-index: 1;
   opacity: 1;
+  transition-property: opacity, transform !important;
+  backface-visibility: visible !important;
+  transition-duration: 1s !important;
 }
+
+.me-custom-transition .active.carousel-item-start,
+.me-custom-transition .active.carousel-item-end {
+  z-index: 0;
+  opacity: 0;
+  backface-visibility: visible !important;
+  transition: opacity 2s ease-in-out !important;
+}
+
+/* 
+.carousel-fade {
+  .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    transform: none;
+  }
+
+  .carousel-item.active,
+  .carousel-item-next.carousel-item-start,
+  .carousel-item-prev.carousel-item-end {
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .active.carousel-item-start,
+  .active.carousel-item-end {
+    z-index: 0;
+    opacity: 0;
+    @include transition(opacity 0s $carousel-transition-duration);
+  }
+} */
