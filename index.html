@@ -361,8 +361,14 @@
                                     <img loading="lazy" src="assets/img/contact/requirement_icon.png" alt=" " />
                                 </span>
                                 <div class="form-floating">
-                                    <input name="requirement" type="text" class="form-control rounded-0"
-                                        id="txtRequirement" placeholder=" " value="" required>
+                                    <!-- <input name="requirement" type="text" class="form-control rounded-0"
+                                        id="txtRequirement" placeholder=" " value="" required> -->
+                                    <select name="requirement" id="txtRequirement" class="form-control rounded-0" required>
+                                        <option value="OEM">OEM</option>
+                                        <option value="Housing society">Housing society</option>
+                                        <option value="Office space">Office space</option>
+                                        <option value="Retail space">Retail space</option>
+                                    </select>
                                     <label for="txtRequirement">REQUIREMENT</label>
                                     <div class="invalid-feedback">Please provide a valid requirement.</div>
                                 </div>

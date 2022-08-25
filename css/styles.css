@@ -465,7 +465,8 @@ input:not(:focus):valid ~ .floating-label {
   z-index: 0;
   opacity: 0;
   backface-visibility: visible !important;
-  transition: opacity 2s ease-in-out !important;
+  transform: rotateY(180deg) !important;
+  transition: opacity, transform 1s ease-in-out !important;
 }
 
 /* 
