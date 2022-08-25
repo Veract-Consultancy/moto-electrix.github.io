@@ -397,10 +397,10 @@ input:not(:focus):valid ~ .floating-label {
   background-image: url("../assets/img/home/3D_Model1.png");
 }
 .home-banner-image-2 {
-  background-image: url("../assets/img/home/On_Board_Slide.jpg");
+  background-image: url("../assets/img/home/EVCC_3D_NoBG.png");
 }
 .home-banner-image-3 {
-  background-image: url("../assets/img/home/EV_Charger_Slide.jpg");
+  background-image: url("../assets/img/home/DCDC_3D_NoBG.png");
 }
 
 .copyright-color {
@@ -439,4 +439,15 @@ input:not(:focus):valid ~ .floating-label {
   -webkit-transform-origin: 0 0;
   transform-origin: 0;
   filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.77,M12=0,M21=0,M22=0.77,SizingMethod='auto expand');
+}
+
+.me-custom-transition .carousel-item {
+  opacity: 0;
+  transition-property: opacity;
+  transform: none;
+}
+
+.me-custom-transition .carousel-item.active {
+  z-index: 1;
+  opacity: 1;
 }
