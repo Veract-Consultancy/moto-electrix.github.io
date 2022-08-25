@@ -92,7 +92,7 @@ function AddProducts() {
             if (deviceType === "Desktop" ||
                 (i + 1) <= chargerProducts.length && deviceType === "Tab") {
                 if (deviceType === "Tab" || (i % 4 === 0)) {
-                    chargerProductHtml += `<div class='carousel-item${i === 0 ? ' active' : ''}'><div class='row'>`;
+                    chargerProductHtml += `<div data-bs-interval='4000' class='carousel-item${i === 0 ? ' active' : ''}'><div class='row'>`;
                 }
                 if ((i + 1) > chargerProducts.length) {
                     chargerProductHtml += "<div class='col'></div>";
