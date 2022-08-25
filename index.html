@@ -17,17 +17,26 @@
         };
         var disableBtn = function () {
             document.getElementById("contactFormSubmit").disabled = true;
+            document.getElementById('chkVerification').disabled = false;
+            document.getElementById('chkVerification').checked = false;
         };
-        var onloadCallback = function () {
-            grecaptcha.render('recaptchaId', {
-                'sitekey': '6Le52pUhAAAAAF6Zpi-cTr0zBa_pSugwbyfQLpmM',
-                'callback': enableBtn,
-                'expired-callback': disableBtn,
-                'error-callback': disableBtn
-            });
-        };
+        //var onloadCallback = function () {
+        //    grecaptcha.render('recaptchaId', {
+        //        'sitekey': '6Le52pUhAAAAAF6Zpi-cTr0zBa_pSugwbyfQLpmM',
+        //        'data-size': 'invisible',
+        //        'callback': enableBtn,
+        //        'expired-callback': disableBtn,
+        //        'error-callback': disableBtn
+        //    });
+        //};
+        function triggerRecaptchaVerification() {
+            if (document.getElementById('chkVerification').checked) {
+                document.getElementById('chkVerification').disabled = true;
+                grecaptcha.execute();
+            }
+        }
     </script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    <script src="https://www.google.com/recaptcha/api.js" async defer>
     </script>
 </head>
 
@@ -363,7 +372,8 @@
                                 <div class="form-floating">
                                     <!-- <input name="requirement" type="text" class="form-control rounded-0"
                                         id="txtRequirement" placeholder=" " value="" required> -->
-                                    <select name="requirement" id="txtRequirement" class="form-control rounded-0" required>
+                                    <select name="requirement" id="txtRequirement" class="form-control rounded-0"
+                                        required>
                                         <option value="OEM">OEM</option>
                                         <option value="Housing society">Housing society</option>
                                         <option value="Office space">Office space</option>
@@ -378,7 +388,7 @@
                             <div class="mb-3">
                                 <div class="form-floating">
                                     <textarea name="message" type="text" class="form-control rounded-0" id="txtRemarks"
-                                        placeholder=" " value="" style="height: 175px;"></textarea>
+                                        placeholder=" " value="" style="height: 206px;"></textarea>
                                     <label for="txtRemarks">REMARKS</label>
                                 </div>
                             </div>
@@ -386,9 +396,13 @@
                                 <span class="input-group-text rounded-0 contact-input-icon-bg pt-1">
                                     <img loading="lazy" src="assets/img/contact/secure_icon.png" alt=" " />
                                 </span>
-                                <div class="form-control rounded-0 px-1">
-                                    <div id="recaptchaId" class="g-recaptcha">
-                                    </div>
+                                <div class="form-control rounded-0 py-1">
+                                    VERIFICATION<br />
+                                    <input class="form-check-input rounded-0 " onclick="triggerRecaptchaVerification()"
+                                        type="checkbox" value="" id="chkVerification">
+                                    <label class="form-check-label fw-bolder" for="flexCheckDefault">
+                                        I am not a Robot
+                                    </label>
                                 </div>
                             </div>
                             <div class="d-grid" style="height: 55px;">
@@ -509,6 +523,9 @@
             </div>
         </nav>
     </section>
+    <div id="recaptchaId" class="g-recaptcha d-none" data-sitekey="6LcSOKghAAAAAG6377N29zy9gjaw2QGwgECv5-Od"
+        data-callback="enableBtn" data-expired-callback="disableBtn" data-error-callback="disableBtn"
+        data-size="invisible"></div>
 
     <!-- scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
