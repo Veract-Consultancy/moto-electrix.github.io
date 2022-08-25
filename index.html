@@ -17,258 +17,166 @@
         };
         var disableBtn = function () {
             document.getElementById("contactFormSubmit").disabled = true;
+            document.getElementById('chkVerification').disabled = false;
+            document.getElementById('chkVerification').checked = false;
         };
-        var onloadCallback = function () {
-            grecaptcha.render('recaptchaId', {
-                'sitekey': '6LfZkX8hAAAAAJRtoURy33cWmGtxY6XO6Ja7f7AI',
-                'callback': enableBtn,
-                'expired-callback': disableBtn,
-                'error-callback': disableBtn
-            });
-        };
+        //var onloadCallback = function () {
+        //    grecaptcha.render('recaptchaId', {
+        //        'sitekey': '6Le52pUhAAAAAF6Zpi-cTr0zBa_pSugwbyfQLpmM',
+        //        'data-size': 'invisible',
+        //        'callback': enableBtn,
+        //        'expired-callback': disableBtn,
+        //        'error-callback': disableBtn
+        //    });
+        //};
+        function triggerRecaptchaVerification() {
+            if (document.getElementById('chkVerification').checked) {
+                document.getElementById('chkVerification').disabled = true;
+                grecaptcha.execute();
+            }
+        }
+        function showAccordian(id) {
+            document.getElementById("charger-collapse-container").classList.remove('show');
+            document.getElementById("evcc-collapse-container").classList.remove('show');
+            document.getElementById("onboard-charger-collapse-container").classList.remove('show');
+            document.getElementById("dc-dc-converter-collapse-container").classList.remove('show');
+            document.getElementById(id).classList.add("show");
+        }
     </script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    <script src="https://www.google.com/recaptcha/api.js" async defer>
     </script>
 </head>
 
 <body id="page-top">
+    <div class="pt-5 d-lg-block d-none"></div>
+    <div class="d-lg-none" style="padding-top: 2.25rem;"></div>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg py-1 navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container px-4 px-lg-2">
-            <a class="navbar-brand" href="#page-top"></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#page-top">
+                <img loading="lazy" width="108px" class="d-lg-none" src="assets/img/home/ME_Logo.png" alt=" ">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right mobile-hamburger-button" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
                 ≡
-                <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#products">Products</a>
                     </li>
-                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#partners">Our
+                    <!-- <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#partners">Our
                             Partners</a></li>
                     <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#hostearn">Host &
                             Earn</a></li>
                     <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#evready">EV Ready</a>
+                    </li> -->
+                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#contacts">Contact
+                            Us</a>
                     </li>
-                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#customoem">Custom
-                            oem</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Products-->
-    <section id="products" class="position-relative">
-        <div class="position-absolute w-100 h-100 mt-4 pt-5 container-fluid" style="z-index: 1;">
+    <!-- Products Desktop-->
+    <section id="product-desktop" class="position-relative pt-3">
+        <div class="container">
             <div class="row">
-                <div class="col d-none d-lg-block">
-                    <img width="195px" height="131px" class="ps-5" src="assets/img/home/ME_Logo.png" alt=" ">
-                </div>
-                <div class="col text-center">
-                    <div class="charger-float">
-                        <img src="assets/img/home/charger.svg" alt=" ">
-                        <p>CHARGER</p>
+                <div class="col-lg-6 col-md-12 py-2">
+                    <div class="col d-none d-lg-block">
+                        <img loading="lazy" width="195px" class="ps-5" src="assets/img/home/ME_Logo.png" alt=" ">
+                    </div>
+                    <div>
+                        <div id="homeCarousel" class="carousel slide me-custom-transition" data-interval="0"
+                            data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="2000">
+                                    <div class="container-fluid w-100 home-banner home-banner-image-1">
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <div class="container-fluid w-100 home-banner home-banner-image-2">
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <div class="container-fluid w-100 home-banner home-banner-image-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col text-center">
-                    <div class="vehicle-pilot-float">
-                        <img src="assets/img/home/vehicle-pilot.svg" alt=" ">
-                        <p>VEHICLE-PILOT</p>
-                    </div>
-                </div>
-                <div class="col text-center">
-                    <div class="user-grounding-float">
-                        <img src="assets/img/home/user-grounding.svg" alt=" ">
-                        <p>USER GROUNDING</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="ms-5 ps-5 me-secondary-font">
+                <div class="col-lg-5 col-md-12 py-2">
+                    <div class="d-grid px-5 py-3 h-100 home-product-text">
+                        <div class="my-auto me-secondary-font me-secondary-color">
                             <i>
-                                <div class="fs-1 mb-n1 fw-bolder ev-title">EV</div>
-                                <div class="mt-n1 fs-4 me-yellow-color">TECHNOLOGY</div>
-                                <p class="me-secondary-color fw-light">Delivering a safe and seamless charging
-                                    experience through
-                                    a comprehensive range of EV charging solutions </p>
+                                <div class="fs-1 mb-n1 fw-bolder ev-title">AUTOMOTIVE POWER ELECTRONIC COMPONENTS </div>
+                                <div class="mt-n1 fs-4 me-yellow-color ev-subtitle">FOR EV & ICE VEHICLES</div>
+                                <!-- <p class="fw-light ev-content">
+                                    
+                                </p> -->
                             </i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-12">
+                    <div class="my-auto row mt-3 h-100">
+                        <div class="col-lg-12 col-3 text-center">
+                            <a href="#products" onclick="showAccordian('charger-collapse-container')"
+                                class="text-decoration-none me-color">
+                                <img loading="lazy" width="50px" src="assets/img/home/charger.svg" alt=" ">
+                                <p style="min-width: 70px;">EV Charging Stations</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-12 col-3 text-center">
+                            <a href="#products" onclick="showAccordian('evcc-collapse-container')"
+                                class="text-decoration-none me-color">
+                                <img loading="lazy" width="50px" src="assets/img/home/vehicle-pilot.svg" alt=" ">
+                                <p>EV Charge Controllers</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-12 col-3 text-center">
+                            <a href="#products" onclick="showAccordian('onboard-charger-collapse-container')"
+                                class="text-decoration-none me-color">
+                                <img loading="lazy" width="50px" src="assets/img/home/user-grounding.svg" alt=" ">
+                                <p>On-Board Chargers</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-12 col-3 text-center">
+                            <a href="#products" onclick="showAccordian('dc-dc-converter-collapse-container')"
+                                class="text-decoration-none me-color">
+                                <img loading="lazy" width="50px" src="assets/img/home/vehicle-pilot.svg" alt=" ">
+                                <p>DC-DC Converters</p>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0"
-                    class="carousal-indicator-btn active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/img/home/banner3.jpg" class="d-block w-100 vh-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/img/home/banner3.jpg" class="d-block w-100 vh-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/img/home/banner3.jpg" class="d-block w-100 vh-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
     </section>
 
-    <!-- DISTINCTIVE PRODUCTS -->
-    <section id="distinctiveproduts">
+    <!-- DISTINCTIVE PRODUCTS-->
+    <section id="products" class="distinctiveproduts anchor-scroll">
         <nav class="navbar navbar-dark bg-dark w-100">
             <div class="container">
-                <span class="me-yellow-color mx-auto mb-">DISTINCTIVE PRODUCTS</span>
+                <span class="me-yellow-color mx-auto fs-5 fw-bold">PRODUCTS</span>
             </div>
         </nav>
         <div class="accordion accordion-flush" id="productAccordian">
             <div class="accordion-item mb-1">
                 <h2 class="accordion-header me-color" id="charger-accordian-header">
-                    <button class="accordion-button me-color py-1 collapsed ps-5" type="button"
+                    <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
                         data-bs-toggle="collapse" data-bs-target="#charger-collapse-container" aria-expanded="false"
                         aria-controls="charger-collapse-container">
-                        Chargers
+                        EV CHARGING STATIONS
                     </button>
                 </h2>
                 <div id="charger-collapse-container" class="accordion-collapse collapse show"
                     aria-labelledby="charger-accordian-header" data-bs-parent="#productAccordian">
-                    <div class="accordion-body py-5">
+                    <div class="accordion-body py-5 px-0">
                         <div id="charger-carousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col"></div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/owl_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>OWL SERIES</h6>
-                                                    <p class="fs-7">3 socket AC charging <br />
-                                                        stations for 2 & 3 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/falcon_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>FALCON SERIES</h6>
-                                                    <p class="fs-7">Single cable AC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/hornbill_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>HORNBILL SERIES</h6>
-                                                    <p class="fs-7">2 cable DC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/pelican_pro_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>PELICAN PRO SERIES</h6>
-                                                    <p class="fs-7">2 cable DC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col"></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col"></div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/owl_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>OWL SERIES 2</h6>
-                                                    <p class="fs-7">3 socket AC charging <br />
-                                                        stations for 2 & 3 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/falcon_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>FALCON SERIES</h6>
-                                                    <p class="fs-7">Single cable AC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/hornbill_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>HORNBILL SERIES</h6>
-                                                    <p class="fs-7">2 cable DC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/pelican_pro_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>PELICAN PRO SERIES</h6>
-                                                    <p class="fs-7">2 cable DC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col"></div>
-                                    </div>
-                                </div>
+                            <div id="chargerContent" class="carousel-inner">
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#charger-carousel"
                                 data-bs-slide="prev">
@@ -285,175 +193,136 @@
                 </div>
             </div>
             <div class="accordion-item mb-1">
-                <h2 class="accordion-header me-color" id="product1-accordian-header">
-                    <button class="accordion-button me-color py-1 collapsed ps-5" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#product1-collapse-container" aria-expanded="false"
-                        aria-controls="product1-collapse-container">
-                        Product 1
+                <h2 class="accordion-header me-color" id="evcc-accordian-header">
+                    <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#evcc-collapse-container" aria-expanded="false"
+                        aria-controls="evcc-collapse-container">
+                        EV CHARGE CONTROLLERS
                     </button>
                 </h2>
-                <div id="product1-collapse-container" class="accordion-collapse collapse"
-                    aria-labelledby="product1-accordian-header" data-bs-parent="#productAccordian">
-                    <div class="accordion-body py-5">
-                        <div id="product1-carousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col"></div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/owl_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>OWL SERIES</h6>
-                                                    <p class="fs-7">3 socket AC charging <br />
-                                                        stations for 2 & 3 wheelers</p>
+                <div id="evcc-collapse-container" class="accordion-collapse collapse"
+                    aria-labelledby="evcc-accordian-header" data-bs-parent="#productAccordian">
+                    <div class="accordion-body py-5 px-0">
+                        <div id="evcc-carousel" class="carousel slide" data-bs-ride="carousel">
+                            <div id="evccContent" class="carousel-inner">
+                                <div class="container-fluid">
+                                    <div class="row mx-auto border rounded-4 product-group">
+                                        <div class="col-lg-6 col-md-12 text-center my-auto">
+                                            <img style="width: 100%; max-width: 300px;"
+                                                src="assets/img/distinctiveproducts/evcc/evcc_prototype.png" alt="...">
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 p-0">
+                                            <div
+                                                class="d-grid px-5 py-3 h-100 product-text me-secondary-font me-secondary-color border rounded-4">
+                                                <div class="my-auto">
+                                                    <h5 class="d-inline me-border-bottom me-secondary-color mb-3">EV -
+                                                        Charge
+                                                        Controller</h5>
+                                                    <br />
+                                                    <br />
+                                                    <p class="fs-6">PLC communication modem
+                                                        installed in EV in conformity with
+                                                        the global standard(ISO/IEC
+                                                        15118 and DIN 70121) for AC/DC charging.
+                                                    </p>
+                                                    <p>
+                                                        Functions such information as
+                                                        charging sequence, charging,
+                                                        user authentication.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/falcon_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>FALCON SERIES</h6>
-                                                    <p class="fs-7">Single cable AC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/hornbill_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>HORNBILL SERIES</h6>
-                                                    <p class="fs-7">2 cable DC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/pelican_pro_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>PELICAN PRO SERIES</h6>
-                                                    <p class="fs-7">2 cable DC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col"></div>
                                     </div>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#product1-carousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#product1-carousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item mb-1">
+                <h2 class="accordion-header me-color" id="onboard-charger-accordian-header">
+                    <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#onboard-charger-collapse-container"
+                        aria-expanded="false" aria-controls="onboard-charger-collapse-container">
+                        AC-DC ON-BOARD CHARGERS
+                    </button>
+                </h2>
+                <div id="onboard-charger-collapse-container" class="accordion-collapse collapse"
+                    aria-labelledby="onboard-charger-accordian-header" data-bs-parent="#productAccordian">
+                    <div class="accordion-body py-5">
+                        <div id="onboard-charger-carousel" class="carousel slide" data-bs-ride="carousel">
+                            <div id="onboard-charger-content" class="carousel-inner">
+                                <div class="container-fluid">
+                                    <div class="row mx-auto border rounded-4 product-group">
+                                        <div class="col-lg-6 col-md-12 text-center my-auto">
+                                            <img style="width: 100%; max-width: 300px;"
+                                                src="assets/img/distinctiveproducts/onboardcharger/onboard_charger_prototype.png"
+                                                alt="...">
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 p-0">
+                                            <div
+                                                class="d-grid px-5 py-3 h-100 product-text me-secondary-font me-secondary-color border rounded-4">
+                                                <div class="my-auto">
+                                                    <h5 class="d-inline me-border-bottom me-secondary-color mb-3">
+                                                        AC-DC On-board charger
+                                                    </h5>
+                                                    <br />
+                                                    <br />
+                                                    <p>Ac Input Wide Voltage，Range: AC90V~264V</p>
+                                                    <p>AC Input Frequency Range: 40~70Hz</p>
+                                                    <p>With APFC function，Power Factor:≥ 0.98</p>
+                                                    <p>Soft Switching Technology，Efficiency:≥ 93.0%</p>
+                                                    <p>Protection Level: IP67</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
-                <h2 class="accordion-header me-color" id="product2-accordian-header">
-                    <button class="accordion-button me-color py-1 collapsed ps-5" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#product3-collapse-container" aria-expanded="false"
-                        aria-controls="product3-collapse-container">
-                        Product 2
+                <h2 class="accordion-header me-color" id="dc-dc-converter-accordian-header">
+                    <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#dc-dc-converter-collapse-container"
+                        aria-expanded="false" aria-controls="dc-dc-converter-collapse-container">
+                        DC-DC CONVERTERS
                     </button>
                 </h2>
-                <div id="product3-collapse-container" class="accordion-collapse collapse"
-                    aria-labelledby="product2-accordian-header" data-bs-parent="#productAccordian">
+                <div id="dc-dc-converter-collapse-container" class="accordion-collapse collapse"
+                    aria-labelledby="dc-dc-converter-accordian-header" data-bs-parent="#productAccordian">
                     <div class="accordion-body py-5">
-                        <div id="product2-carousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col"></div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/owl_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>OWL SERIES</h6>
-                                                    <p class="fs-7">3 socket AC charging <br />
-                                                        stations for 2 & 3 wheelers</p>
+                        <div id="dc-dc-converter-carousel" class="carousel slide" data-bs-ride="carousel">
+                            <div id="dc-dc-converter-content" class="carousel-inner">
+                                <div class="container-fluid">
+                                    <div class="row mx-auto border rounded-4 product-group">
+                                        <div class="col-lg-6 col-md-12 text-center my-auto">
+                                            <img style="width: 100%; max-width: 300px;"
+                                                src="assets/img/distinctiveproducts/dc-dc-converter/DCDC_3D_NoBG.png"
+                                                alt="...">
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 p-0">
+                                            <div
+                                                class="d-grid px-5 py-3 h-100 product-text me-secondary-font me-secondary-color border rounded-4">
+                                                <div class="my-auto">
+                                                    <h5 class="d-inline me-border-bottom me-secondary-color mb-3">
+                                                        DC-DC convertor
+                                                    </h5>
+                                                    <br />
+                                                    <br />
+                                                    <p>A complete line of high quality DC/DC converters in a compact
+                                                        housing.</p>
+                                                    <p>Setup and Stepdown.</p>
+                                                    <p>Output current capability ranging from 1 Amps to 150 Amps.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/falcon_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>FALCON SERIES</h6>
-                                                    <p class="fs-7">Single cable AC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/hornbill_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>HORNBILL SERIES</h6>
-                                                    <p class="fs-7">2 cable DC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="border rounded-4 product-group">
-                                                <div class="py-5">
-                                                    <img src="assets/img/distinctiveproducts/chargers/pelican_pro_series.png"
-                                                        class="d-block w-100" alt="...">
-                                                </div>
-                                                <div
-                                                    class="border me-secondary-font rounded-4 text-center product-text me-secondary-color p-2">
-                                                    <h6>PELICAN PRO SERIES</h6>
-                                                    <p class="fs-7">2 cable DC charging stations for 4 wheelers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col"></div>
                                     </div>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#product2-carousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#product2-carousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -462,14 +331,14 @@
     </section>
 
     <!-- INSTALLATION AND SERVICES -->
-    <section id="installationservices" class="pb-5">
+    <!-- <section id="installationservices" class="pb-5">
         <nav class="navbar navbar-dark bg-dark w-100 mb-5">
             <div class="container">
-                <span class="me-yellow-color mx-auto mb-">INSTALLATION AND SERVICES</span>
+                <span class="me-yellow-color mx-auto fs-5 fw-bold">INSTALLATION AND SERVICES</span>
             </div>
         </nav>
         <div class="container p-5">
-            <img width="100%" height="250px" src="assets/img/installationservice/installation_tools.png" />
+            <img loading="lazy" width="100%" height="250px" src="assets/img/installationservice/installation_tools.png" />
             <div class="px-5 py-3 rounded-1 installation-text-div me-secondary-font me-secondary-color">
                 <h5 class="me-border-bottom me-secondary-color mb-3">OWL SERIES</h5>
                 <p class="fs-6">Video provides a powerful way to help you prove your point. When you click Online Video,
@@ -490,107 +359,121 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contacts -->
-    <section id="contacts" class="pb-5">
+    <section id="contacts" class="pb-5 anchor-scroll">
         <nav class="navbar navbar-dark bg-dark w-100 mb-5">
             <div class="container">
-                <span class="me-yellow-color mx-auto mb-">CONTACT US</span>
+                <span class="me-yellow-color mx-auto fs-5 fw-bold">CONTACT US</span>
             </div>
         </nav>
-        <div class="container p-3 border rounded contact-form-area">
-            <form action="https://formsubmit.co/sumanthehellking@gmail.com" method="POST">
-                <div>
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="http://localhost/moto-electrix">
-                    <input type="hidden" name="_subject" value="New Contact Message">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_autoresponse"
-                        value="Thank you for contacting us, we will get back to you soon!!">
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                <img src="assets/img/contact/name_icon.png" alt=" " />
-                            </span>
-                            <div class="form-floating">
-                                <input type="text" class="form-control rounded-0" id="txtName" required name="name"
-                                    placeholder=" " value="" required>
-                                <label for="txtName">NAME</label>
-                                <div class="invalid-feedback">Please provide a valid name.</div>
+        <div class="px-2">
+            <div class="container p-3 border rounded contact-form-area">
+                <form action="https://formsubmit.co/ccb4d5c859355807d3b5b2611551bcc9" method="POST">
+                    <div>
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="http://www.motoelectrix.in/">
+                        <input type="hidden" name="_subject" value="New Contact Message">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_autoresponse"
+                            value="Thank you for contacting us, we will get back to you soon!!">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg">
+                                    <img loading="lazy" src="assets/img/contact/name_icon.png" alt=" " />
+                                </span>
+                                <div class="form-floating">
+                                    <input type="text" class="form-control rounded-0" id="txtName" required name="name"
+                                        placeholder=" " value="" required>
+                                    <label for="txtName">NAME</label>
+                                    <div class="invalid-feedback">Please provide a valid name.</div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg">
+                                    <img loading="lazy" src="assets/img/contact/phone_icon.png" alt=" " />
+                                </span>
+                                <div class="form-floating">
+                                    <input name="phone" type="text" class="form-control rounded-0" id="txtPhone"
+                                        placeholder=" " value="" required>
+                                    <label for="txtPhone">PHONE</label>
+                                    <div class="invalid-feedback">Please provide a valid phone.</div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg">
+                                    <img loading="lazy" src="assets/img/contact/mail_icon.png" alt=" " />
+                                </span>
+                                <div class="form-floating">
+                                    <input name="email" type="text" class="form-control rounded-0" id="txtEmail"
+                                        placeholder=" " value="" required>
+                                    <label for="txtEmail">E-MAIL</label>
+                                    <div class="invalid-feedback">Please provide a valid email.</div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg">
+                                    <img loading="lazy" src="assets/img/contact/org_icon.png" alt=" " />
+                                </span>
+                                <div class="form-floating">
+                                    <input name="organisation" type="text" class="form-control rounded-0" id="txtOrg"
+                                        placeholder=" " value="" required>
+                                    <label for="txtOrg">ORGANISATION</label>
+                                    <div class="invalid-feedback">Please provide a valid organisation.</div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg">
+                                    <img loading="lazy" src="assets/img/contact/requirement_icon.png" alt=" " />
+                                </span>
+                                <div class="form-floating">
+                                    <!-- <input name="requirement" type="text" class="form-control rounded-0"
+                                        id="txtRequirement" placeholder=" " value="" required> -->
+                                    <select name="requirement" id="txtRequirement" class="form-control rounded-0"
+                                        required>
+                                        <option value="OEM">OEM</option>
+                                        <option value="Housing society">Housing society</option>
+                                        <option value="Office space">Office space</option>
+                                        <option value="Retail space">Retail space</option>
+                                    </select>
+                                    <label for="txtRequirement">REQUIREMENT</label>
+                                    <div class="invalid-feedback">Please provide a valid requirement.</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                <img src="assets/img/contact/phone_icon.png" alt=" " />
-                            </span>
-                            <div class="form-floating">
-                                <input name="phone" type="text" class="form-control rounded-0" id="txtPhone"
-                                    placeholder=" " value="" required>
-                                <label for="txtPhone">PHONE</label>
-                                <div class="invalid-feedback">Please provide a valid phone.</div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="mb-3">
+                                <div class="form-floating">
+                                    <textarea name="message" type="text" class="form-control rounded-0" id="txtRemarks"
+                                        placeholder=" " value="" style="height: 206px;"></textarea>
+                                    <label for="txtRemarks">REMARKS</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                <img src="assets/img/contact/mail_icon.png" alt=" " />
-                            </span>
-                            <div class="form-floating">
-                                <input name="email" type="text" class="form-control rounded-0" id="txtEmail"
-                                    placeholder=" " value="" required>
-                                <label for="txtEmail">E-MAIL</label>
-                                <div class="invalid-feedback">Please provide a valid email.</div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text rounded-0 contact-input-icon-bg pt-1">
+                                    <img loading="lazy" src="assets/img/contact/secure_icon.png" alt=" " />
+                                </span>
+                                <div class="form-control rounded-0 py-1">
+                                    VERIFICATION<br />
+                                    <input class="form-check-input rounded-0 " onclick="triggerRecaptchaVerification()"
+                                        type="checkbox" value="" id="chkVerification">
+                                    <label class="form-check-label fw-bolder" for="flexCheckDefault">
+                                        I am not a Robot
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                <img src="assets/img/contact/org_icon.png" alt=" " />
-                            </span>
-                            <div class="form-floating">
-                                <input name="organisation" type="text" class="form-control rounded-0" id="txtOrg"
-                                    placeholder=" " value="" required>
-                                <label for="txtOrg">ORGANISATION</label>
-                                <div class="invalid-feedback">Please provide a valid organisation.</div>
-                            </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                <img src="assets/img/contact/requirement_icon.png" alt=" " />
-                            </span>
-                            <div class="form-floating">
-                                <input name="requirement" type="text" class="form-control rounded-0" id="txtRequirement"
-                                    placeholder=" " value="" required>
-                                <label for="txtRequirement">REQUIREMENT</label>
-                                <div class="invalid-feedback">Please provide a valid requirement.</div>
+                            <div class="d-grid" style="height: 55px;">
+                                <button id="contactFormSubmit" type="submit"
+                                    class="btn rounded-0 contact-send-message-btn" disabled type="button">SEND
+                                    MESSAGE</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="mb-3">
-                            <div class="form-floating">
-                                <textarea name="message" type="text" class="form-control rounded-0" id="txtRemarks"
-                                    placeholder=" " value="" style="height: 175px;"></textarea>
-                                <label for="txtRemarks">REMARKS</label>
-                            </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                <img src="assets/img/contact/secure_icon.png" alt=" " />
-                            </span>
-                            <div class="form-control rounded-0">
-                                <div id="recaptchaId" class="g-recaptcha"></div>
-                            </div>
-                        </div>
-                        <div class="d-grid" style="height: 55px;">
-                            <button id="contactFormSubmit" type="submit" class="btn rounded-0 contact-send-message-btn"
-                                disabled type="button">SEND
-                                MESSAGE</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -601,46 +484,82 @@
                 <div class="col-lg-3 col-md-12">
                     <h5 class="me-border-bottom me-secondary-color d-inline mb-2">TALK TO US</h5>
                     <div class="mt-3">
-                        <p class="me-secondary-color">+91 44 23456789</p>
-                        <p>info@motoeletrix.com</p>
-                        <p class="me-secondary-color">#001, Main Street<br />
-                            Velacherry<br />
-                            Chennai - 600 000</p>
+                        <a class="text-decoration-none" href="tel:+919789991565">
+                            <p class="me-secondary-color">+91 9789991565</p>
+                        </a>
+                        <a class="text-decoration-none" href="mailto:info@motoelectrix.com">
+                            <p class="me-color">info@motoelectrix.com</p>
+                        </a>
+                        <p class="me-secondary-color">Veract Consultancy Pvt Ltd<br />
+                            #17, First Street<br />
+                            Tansi Nagar, Velachery<br />
+                            Chennai - 600 042</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-12">
+                <!-- show only in desktop -->
+                <div class="col-lg-3 col-md-12 d-lg-block d-none">
                     <h5 class="me-border-bottom me-secondary-color d-inline mb-2">QUICK LINK</h5>
                     <div class="mt-3">
-                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img
+                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
                                 src="assets/img/footerlink/bullet-icon.svg" /> PRODUCTS</a>
-                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img
+                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
                                 src="assets/img/footerlink/bullet-icon.svg" /> OUR PARTNERS</a>
-                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img
+                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
                                 src="assets/img/footerlink/bullet-icon.svg" /> HOST & EARN</a>
-                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img
+                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
                                 src="assets/img/footerlink/bullet-icon.svg" /> EV READY</a>
-                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img
+                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
                                 src="assets/img/footerlink/bullet-icon.svg" /> CUSTOM OEM</a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-12">
+                <div class="col-lg-2 col-md-12 ">
                     <h5 class="me-border-bottom me-secondary-color d-inline mb-2">FOLLOW US</h5>
-                    <div class="mt-3">
-                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img width="25px"
-                                height="25px" src="assets/img/footerlink/facebook_icon.png" /> Facebook</a>
-                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img width="25px"
-                                height="25px" src="assets/img/footerlink/instagram_icon.png" /> Instagram</a>
-                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img width="25px"
-                                height="25px" src="assets/img/footerlink/twitter_icon.png" /> Twitter</a>
-                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img width="25px"
-                                height="25px" src="assets/img/footerlink/youtube_icon.png" /> YouTube</a>
-                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img width="25px"
-                                height="25px" src="assets/img/footerlink/whatsapp_icon.png" /> WhatsApp</a>
+                    <!-- show only in desktop -->
+                    <div class="mt-3 d-lg-block d-none">
+                        <a class="d-block pb-2 text-decoration-none me-color" role="button">
+                            <img loading="lazy" width="25px" height="25px"
+                                src="assets/img/footerlink/facebook_icon.png" /> Facebook</a>
+                        <a class="d-block pb-2 text-decoration-none me-color" role="button">
+                            <img loading="lazy" width="25px" height="25px"
+                                src="assets/img/footerlink/instagram_icon.png" />
+                            Instagram</a>
+                        <a class="d-block pb-2 text-decoration-none me-color" role="button">
+                            <img loading="lazy" width="25px" height="25px"
+                                src="assets/img/footerlink/twitter_icon.png" /> Twitter</a>
+                        <a class="d-block pb-2 text-decoration-none me-color" role="button">
+                            <img loading="lazy" width="25px" height="25px"
+                                src="assets/img/footerlink/youtube_icon.png" /> YouTube</a>
+                        <a class="d-block pb-2 text-decoration-none me-color" role="button">
+                            <img loading="lazy" width="25px" height="25px"
+                                src="assets/img/footerlink/whatsapp_icon.png" /> WhatsApp</a>
+                    </div>
+                    <!-- show only in mobile -->
+                    <div class="my-3 d-lg-none">
+                        <a class="pe-1 text-decoration-none me-color" role="button">
+                            <img loading="lazy" width="25px" height="25px"
+                                src="assets/img/footerlink/facebook_icon.png" />
+                        </a>
+                        <a class="pe-1 text-decoration-none me-color" role="button">
+                            <img loading="lazy" width="25px" height="25px"
+                                src="assets/img/footerlink/instagram_icon.png" />
+                        </a>
+                        <a class="pe-1 text-decoration-none me-color" role="button">
+                            <img loading="lazy" width="25px" height="25px"
+                                src="assets/img/footerlink/twitter_icon.png" />
+                        </a>
+                        <a class="pe-1 text-decoration-none me-color" role="button">
+                            <img loading="lazy" width="25px" height="25px"
+                                src="assets/img/footerlink/youtube_icon.png" />
+                        </a>
+                        <a class="pe-1 text-decoration-none me-color" role="button">
+                            <img loading="lazy" width="25px" height="25px"
+                                src="assets/img/footerlink/whatsapp_icon.png" />
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 d-none d-lg-block">
-                    <img width="100%" height="100%" style="opacity: 0.2;" src="assets/img/footerlink/logo_saturated.png"
-                        alt="" />
+                    <img loading="lazy" width="100%" height="100%" style="opacity: 0.2;"
+                        src="assets/img/footerlink/logo_saturated.png" alt="" />
                 </div>
             </div>
         </div>
@@ -648,17 +567,26 @@
 
     <section id="policycopyrights">
         <nav class="navbar navbar-dark bg-dark w-100">
-            <div class="container">
-                <span>
-                    <a role="button" class="me-color text-decoration-none" href="#">Privacy Policy | Terms and
-                        Conditions</a>
-                </span>
-                <span class="float-end position-absolute end-0 pe-5">
-                    © <span id="year">2021</span> MOTO ELETRIX. ALL RIGHTS RESERVED
-                </span>
+            <div class="container-fluid">
+                <div class="row w-100">
+                    <div class="col-lg-6 col-md-12 text-center">
+                        <span>
+                            <a role="button" class="me-color text-decoration-none" href="#">
+                                Privacy Policy | Terms and Conditions</a>
+                        </span>
+                    </div>
+                    <div class="col-lg-6 col-md-12 text-center">
+                        <span class="copyright-color">
+                            © <span id="year">2022</span> MOTO ELECTRIX. ALL RIGHTS RESERVED
+                        </span>
+                    </div>
+                </div>
             </div>
         </nav>
     </section>
+    <div id="recaptchaId" class="g-recaptcha d-none" data-sitekey="6LcSOKghAAAAAG6377N29zy9gjaw2QGwgECv5-Od"
+        data-callback="enableBtn" data-expired-callback="disableBtn" data-error-callback="disableBtn"
+        data-size="invisible"></div>
 
     <!-- scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
