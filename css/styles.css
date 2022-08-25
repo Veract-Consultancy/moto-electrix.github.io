@@ -420,6 +420,11 @@ input:not(:focus):valid ~ .floating-label {
   .distinctiveproduts .accordion-button {
     text-align: left;
   }
+  #evcc-collapse-container .carousel-inner,
+  #onboard-charger-collapse-container .carousel-inner {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
 }
 
 #recaptchaId {
