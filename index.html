@@ -35,6 +35,13 @@
                 grecaptcha.execute();
             }
         }
+        function showAccordian(id) {
+            document.getElementById("charger-collapse-container").classList.remove('show');
+            document.getElementById("evcc-collapse-container").classList.remove('show');
+            document.getElementById("onboard-charger-collapse-container").classList.remove('show');
+            document.getElementById("dc-dc-converter-collapse-container").classList.remove('show');
+            document.getElementById(id).classList.add("show");
+        }
     </script>
     <script src="https://www.google.com/recaptcha/api.js" async defer>
     </script>
@@ -56,8 +63,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase"
-                            href="#products">Products</a>
+                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#products">Products</a>
                     </li>
                     <!-- <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#partners">Our
                             Partners</a></li>
@@ -82,7 +88,8 @@
                         <img loading="lazy" width="195px" class="ps-5" src="assets/img/home/ME_Logo.png" alt=" ">
                     </div>
                     <div>
-                        <div id="homeCarousel" class="carousel slide me-custom-transition" data-interval="0" data-bs-ride="carousel">
+                        <div id="homeCarousel" class="carousel slide me-custom-transition" data-interval="0"
+                            data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active" data-bs-interval="2000">
                                     <div class="container-fluid w-100 home-banner home-banner-image-1">
@@ -104,13 +111,11 @@
                     <div class="d-grid px-5 py-3 h-100 home-product-text">
                         <div class="my-auto me-secondary-font me-secondary-color">
                             <i>
-                                <div class="fs-1 mb-n1 fw-bolder ev-title">EV</div>
-                                <div class="mt-n1 fs-4 me-yellow-color ev-subtitle">TECHNOLOGY</div>
-                                <p class="fw-light ev-content">
-                                    Delivering a safe and seamless charging experience
-                                    through a comprehensive range of EV charging
-                                    solutions
-                                </p>
+                                <div class="fs-1 mb-n1 fw-bolder ev-title">AUTOMOTIVE POWER ELECTRONIC COMPONENTS </div>
+                                <div class="mt-n1 fs-4 me-yellow-color ev-subtitle">FOR EV & ICE VEHICLES</div>
+                                <!-- <p class="fw-light ev-content">
+                                    
+                                </p> -->
                             </i>
                         </div>
                     </div>
@@ -118,20 +123,32 @@
                 <div class="col-lg-1 col-md-12">
                     <div class="my-auto row mt-3 h-100">
                         <div class="col-lg-12 col-3 text-center">
-                            <img loading="lazy" width="50px" src="assets/img/home/charger.svg" alt=" ">
-                            <p style="min-width: 70px;">EV Charging Stations</p>
+                            <a href="#products" onclick="showAccordian('charger-collapse-container')"
+                                class="text-decoration-none me-color">
+                                <img loading="lazy" width="50px" src="assets/img/home/charger.svg" alt=" ">
+                                <p style="min-width: 70px;">EV Charging Stations</p>
+                            </a>
                         </div>
                         <div class="col-lg-12 col-3 text-center">
-                            <img loading="lazy" width="50px" src="assets/img/home/vehicle-pilot.svg" alt=" ">
-                            <p>EV Charge Controllers</p>
+                            <a href="#products" onclick="showAccordian('evcc-collapse-container')"
+                                class="text-decoration-none me-color">
+                                <img loading="lazy" width="50px" src="assets/img/home/vehicle-pilot.svg" alt=" ">
+                                <p>EV Charge Controllers</p>
+                            </a>
                         </div>
                         <div class="col-lg-12 col-3 text-center">
-                            <img loading="lazy" width="50px" src="assets/img/home/user-grounding.svg" alt=" ">
-                            <p>On-board Chargers</p>
+                            <a href="#products" onclick="showAccordian('onboard-charger-collapse-container')"
+                                class="text-decoration-none me-color">
+                                <img loading="lazy" width="50px" src="assets/img/home/user-grounding.svg" alt=" ">
+                                <p>On-board Chargers</p>
+                            </a>
                         </div>
                         <div class="col-lg-12 col-3 text-center">
-                            <img loading="lazy" width="50px" src="assets/img/home/vehicle-pilot.svg" alt=" ">
-                            <p>DC-DC converters</p>
+                            <a href="#products" onclick="showAccordian('dc-dc-converter-collapse-container')"
+                                class="text-decoration-none me-color">
+                                <img loading="lazy" width="50px" src="assets/img/home/vehicle-pilot.svg" alt=" ">
+                                <p>DC-DC converters</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -296,7 +313,8 @@
                                                     </h5>
                                                     <br />
                                                     <br />
-                                                    <p>A complete line of high quality DC/DC converters in a compact housing.</p>
+                                                    <p>A complete line of high quality DC/DC converters in a compact
+                                                        housing.</p>
                                                     <p>Setup and Stepdown.</p>
                                                     <p>Output current capability ranging from 1 Amps to 150 Amps.</p>
                                                 </div>
@@ -469,10 +487,11 @@
                         <a class="text-decoration-none" href="tel:+919789991565">
                             <p class="me-secondary-color">+91 9789991565</p>
                         </a>
-                        <a class="text-decoration-none" href="mailto:info@motoeletrix.com">
-                            <p class="me-color">info@motoeletrix.com</p>
+                        <a class="text-decoration-none" href="mailto:info@motoelectrix.com">
+                            <p class="me-color">info@motoelectrix.com</p>
                         </a>
-                        <p class="me-secondary-color">#17, First Street<br />
+                        <p class="me-secondary-color">Veract Consultancy Pvt Ltd<br />
+                            #17, First Street<br />
                             Tansi Nagar, Velachery<br />
                             Chennai - 600 042</p>
                     </div>
@@ -558,7 +577,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 text-center">
                         <span class="copyright-color">
-                            © <span id="year">2021</span> MOTO ELETRICX. ALL RIGHTS RESERVED
+                            © <span id="year">2022</span> MOTO ELECTRIX. ALL RIGHTS RESERVED
                         </span>
                     </div>
                 </div>
