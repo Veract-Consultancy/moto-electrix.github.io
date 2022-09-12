@@ -11,40 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" />
-    <script type="text/javascript">
-        var enableBtn = function () {
-            document.getElementById("contactFormSubmit").disabled = false;
-        };
-        var disableBtn = function () {
-            document.getElementById("contactFormSubmit").disabled = true;
-            document.getElementById('chkVerification').disabled = false;
-            document.getElementById('chkVerification').checked = false;
-        };
-        //var onloadCallback = function () {
-        //    grecaptcha.render('recaptchaId', {
-        //        'sitekey': '6Le52pUhAAAAAF6Zpi-cTr0zBa_pSugwbyfQLpmM',
-        //        'data-size': 'invisible',
-        //        'callback': enableBtn,
-        //        'expired-callback': disableBtn,
-        //        'error-callback': disableBtn
-        //    });
-        //};
-        function triggerRecaptchaVerification() {
-            if (document.getElementById('chkVerification').checked) {
-                document.getElementById('chkVerification').disabled = true;
-                grecaptcha.execute();
-            }
-        }
-        function showAccordian(id) {
-            document.getElementById("charger-collapse-container").classList.remove('show');
-            document.getElementById("evcc-collapse-container").classList.remove('show');
-            document.getElementById("onboard-charger-collapse-container").classList.remove('show');
-            document.getElementById("dc-dc-converter-collapse-container").classList.remove('show');
-            document.getElementById(id).classList.add("show");
-        }
-    </script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer>
-    </script>
 </head>
 
 <body id="page-top">
@@ -68,9 +34,9 @@
                     <!-- <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#partners">Our
                             Partners</a></li>
                     <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#hostearn">Host &
-                            Earn</a></li> -->
-                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="evready">EV Ready</a>
-                    </li>
+                            Earn</a></li>
+                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#evready">EV Ready</a>
+                    </li> -->
                     <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#contacts">Contact
                             Us</a>
                     </li>
@@ -140,14 +106,14 @@
                             <a href="#products" onclick="showAccordian('onboard-charger-collapse-container')"
                                 class="text-decoration-none me-color">
                                 <img loading="lazy" width="50px" src="assets/img/home/user-grounding.svg" alt=" ">
-                                <p>On-Board Chargers</p>
+                                <p>On-board Chargers</p>
                             </a>
                         </div>
                         <div class="col-lg-12 col-3 text-center">
                             <a href="#products" onclick="showAccordian('dc-dc-converter-collapse-container')"
                                 class="text-decoration-none me-color">
                                 <img loading="lazy" width="50px" src="assets/img/home/vehicle-pilot.svg" alt=" ">
-                                <p>DC-DC Converters</p>
+                                <p>DC-DC converters</p>
                             </a>
                         </div>
                     </div>
@@ -169,7 +135,7 @@
                     <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
                         data-bs-toggle="collapse" data-bs-target="#charger-collapse-container" aria-expanded="false"
                         aria-controls="charger-collapse-container">
-                        EV CHARGING STATIONS
+                        CHARGERS
                     </button>
                 </h2>
                 <div id="charger-collapse-container" class="accordion-collapse collapse show"
@@ -197,7 +163,7 @@
                     <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
                         data-bs-toggle="collapse" data-bs-target="#evcc-collapse-container" aria-expanded="false"
                         aria-controls="evcc-collapse-container">
-                        EV CHARGE CONTROLLERS
+                        EV - CHARGE CONTROLLER
                     </button>
                 </h2>
                 <div id="evcc-collapse-container" class="accordion-collapse collapse"
@@ -215,18 +181,20 @@
                                             <div
                                                 class="d-grid px-5 py-3 h-100 product-text me-secondary-font me-secondary-color border rounded-4">
                                                 <div class="my-auto">
-                                                    <h5 class="d-inline me-border-bottom me-secondary-color mb-3">EV Charge Controllers</h5>
+                                                    <h5 class="d-inline me-border-bottom me-secondary-color mb-3">EV -
+                                                        Charge
+                                                        Controller</h5>
                                                     <br />
                                                     <br />
                                                     <p class="fs-6">PLC communication modem
-                                                        installed in EV conforming with
-                                                        global standards (ISO/IEC
+                                                        installed in EV in conformity with
+                                                        the global standard(ISO/IEC
                                                         15118 and DIN 70121) for AC/DC charging.
                                                     </p>
                                                     <p>
-                                                        Controls 
+                                                        Functions such information as
                                                         charging sequence, charging,
-                                                        user authentication, inlet actuator, temperature inlet.
+                                                        user authentication.
                                                     </p>
                                                 </div>
                                             </div>
@@ -243,7 +211,7 @@
                     <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
                         data-bs-toggle="collapse" data-bs-target="#onboard-charger-collapse-container"
                         aria-expanded="false" aria-controls="onboard-charger-collapse-container">
-                        AC-DC ON-BOARD CHARGERS
+                        ONBOARD CHARGER
                     </button>
                 </h2>
                 <div id="onboard-charger-collapse-container" class="accordion-collapse collapse"
@@ -263,14 +231,14 @@
                                                 class="d-grid px-5 py-3 h-100 product-text me-secondary-font me-secondary-color border rounded-4">
                                                 <div class="my-auto">
                                                     <h5 class="d-inline me-border-bottom me-secondary-color mb-3">
-                                                        AC-DC On-Board Chargers
+                                                        Onboard charger
                                                     </h5>
                                                     <br />
                                                     <br />
-                                                    <p>AC Input Wide Voltage，Range: AC90V~264V</p>
+                                                    <p>Ac Input Wide Voltage，Range: AC90V~264V</p>
                                                     <p>AC Input Frequency Range: 40~70Hz</p>
-                                                    <p>With APFC function，Power Factor: ≥ 0.98</p>
-                                                    <p>Soft Switching Technology，Efficiency: ≥ 93.0%</p>
+                                                    <p>With APFC function，Power Factor:≥ 0.98</p>
+                                                    <p>Soft Switching Technology，Efficiency:≥ 93.0%</p>
                                                     <p>Protection Level: IP67</p>
                                                 </div>
                                             </div>
@@ -287,7 +255,7 @@
                     <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
                         data-bs-toggle="collapse" data-bs-target="#dc-dc-converter-collapse-container"
                         aria-expanded="false" aria-controls="dc-dc-converter-collapse-container">
-                        DC-DC CONVERTERS
+                        DC-DC CONVERTER
                     </button>
                 </h2>
                 <div id="dc-dc-converter-collapse-container" class="accordion-collapse collapse"
@@ -307,15 +275,14 @@
                                                 class="d-grid px-5 py-3 h-100 product-text me-secondary-font me-secondary-color border rounded-4">
                                                 <div class="my-auto">
                                                     <h5 class="d-inline me-border-bottom me-secondary-color mb-3">
-                                                        DC-DC Converters
+                                                        DC-DC convertor
                                                     </h5>
                                                     <br />
                                                     <br />
-                                                    <p>A complete line of high quality DC-DC converters in a compact
-                                                        housing</p>
-                                                    <p>Step-up and Step-down</p>
-                                                    <p>Output current capability ranging from 1 Amps to 150 Amps</p>
-                                                    <p>5V onwards</p>
+                                                    <p>A complete line of high quality DC/DC converters in a compact
+                                                        housing.</p>
+                                                    <p>Setup and Stepdown.</p>
+                                                    <p>Output current capability ranging from 1 Amps to 150 Amps.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -325,153 +292,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INSTALLATION AND SERVICES -->
-    <!-- <section id="installationservices" class="pb-5">
-        <nav class="navbar navbar-dark bg-dark w-100 mb-5">
-            <div class="container">
-                <span class="me-yellow-color mx-auto fs-5 fw-bold">INSTALLATION AND SERVICES</span>
-            </div>
-        </nav>
-        <div class="container p-5">
-            <img loading="lazy" width="100%" height="250px" src="assets/img/installationservice/installation_tools.png" />
-            <div class="px-5 py-3 rounded-1 installation-text-div me-secondary-font me-secondary-color">
-                <h5 class="me-border-bottom me-secondary-color mb-3">OWL SERIES</h5>
-                <p class="fs-6">Video provides a powerful way to help you prove your point. When you click Online Video,
-                    you can
-                    paste in the embed code for the video you want to add. You can also type a keyword to search online
-                    for the video that best fits your document. To make your document look professionally produced, Word
-                    provides header, footer, cover page, and text box designs that complement each other. For example,
-                    you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements
-                    you want from the different galleries.
-                </p>
-                <p>
-                    Video provides a powerful way to help you prove your point. When you click Online Video, you can
-                    paste in the embed code for the video you want to add. You can also type a keyword to search online
-                    for the video that best fits your document. To make your document look professionally produced, Word
-                    provides header, footer, cover page, and text box designs that complement each other. For example,
-                    you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements
-                    you want from the different galleries.
-                </p>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Contacts -->
-    <section id="contacts" class="pb-5 anchor-scroll">
-        <nav class="navbar navbar-dark bg-dark w-100 mb-5">
-            <div class="container">
-                <span class="me-yellow-color mx-auto fs-5 fw-bold">CONTACT US</span>
-            </div>
-        </nav>
-        <div class="px-2">
-            <div class="container p-3 border rounded contact-form-area">
-                <form action="https://formsubmit.co/ccb4d5c859355807d3b5b2611551bcc9" method="POST">
-                    <div>
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="http://www.motoelectrix.in/">
-                        <input type="hidden" name="_subject" value="New Contact Message">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_autoresponse"
-                            value="Thank you for contacting us, we will get back to you soon!!">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-12">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                    <img loading="lazy" src="assets/img/contact/name_icon.png" alt=" " />
-                                </span>
-                                <div class="form-floating">
-                                    <input type="text" class="form-control rounded-0" id="txtName" required name="name"
-                                        placeholder=" " value="" required>
-                                    <label for="txtName">NAME</label>
-                                    <div class="invalid-feedback">Please provide a valid name.</div>
-                                </div>
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                    <img loading="lazy" src="assets/img/contact/phone_icon.png" alt=" " />
-                                </span>
-                                <div class="form-floating">
-                                    <input name="phone" type="tel" class="form-control rounded-0" id="txtPhone"
-                                        placeholder=" " value="" required>
-                                    <label for="txtPhone">PHONE</label>
-                                    <div class="invalid-feedback">Please provide a valid phone.</div>
-                                </div>
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                    <img loading="lazy" src="assets/img/contact/mail_icon.png" alt=" " />
-                                </span>
-                                <div class="form-floating">
-                                    <input name="email" type="email" class="form-control rounded-0" id="txtEmail"
-                                        placeholder=" " value="" required>
-                                    <label for="txtEmail">E-MAIL</label>
-                                    <div class="invalid-feedback">Please provide a valid email.</div>
-                                </div>
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                    <img loading="lazy" src="assets/img/contact/org_icon.png" alt=" " />
-                                </span>
-                                <div class="form-floating">
-                                    <input name="organisation" type="text" class="form-control rounded-0" id="txtOrg"
-                                        placeholder=" " value="" required>
-                                    <label for="txtOrg">ORGANISATION</label>
-                                    <div class="invalid-feedback">Please provide a valid organisation.</div>
-                                </div>
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text rounded-0 contact-input-icon-bg">
-                                    <img loading="lazy" src="assets/img/contact/requirement_icon.png" alt=" " />
-                                </span>
-                                <div class="form-floating">
-                                    <!-- <input name="requirement" type="text" class="form-control rounded-0"
-                                        id="txtRequirement" placeholder=" " value="" required> -->
-                                    <select name="requirement" id="txtRequirement" class="form-control rounded-0"
-                                        required>
-                                        <option value="OEM">OEM</option>
-                                        <option value="Housing society">Housing society</option>
-                                        <option value="Office space">Office space</option>
-                                        <option value="Retail space">Retail space</option>
-                                    </select>
-                                    <label for="txtRequirement">REQUIREMENT</label>
-                                    <div class="invalid-feedback">Please provide a valid requirement.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                            <div class="mb-3">
-                                <div class="form-floating">
-                                    <textarea name="message" type="text" class="form-control rounded-0" id="txtRemarks"
-                                        placeholder=" " value="" style="height: 206px;"></textarea>
-                                    <label for="txtRemarks">REMARKS</label>
-                                </div>
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text rounded-0 contact-input-icon-bg pt-1">
-                                    <img loading="lazy" src="assets/img/contact/secure_icon.png" alt=" " />
-                                </span>
-                                <div class="form-control rounded-0 py-1">
-                                    VERIFICATION<br />
-                                    <input class="form-check-input rounded-0 " onclick="triggerRecaptchaVerification()"
-                                        type="checkbox" value="" id="chkVerification">
-                                    <label class="form-check-label fw-bolder" for="flexCheckDefault">
-                                        I am not a Robot
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="d-grid" style="height: 55px;">
-                                <button id="contactFormSubmit" type="submit"
-                                    class="btn rounded-0 contact-send-message-btn" disabled type="button">SEND
-                                    MESSAGE</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </section>
@@ -503,12 +323,12 @@
                                 src="assets/img/footerlink/bullet-icon.svg" /> PRODUCTS</a>
                         <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
                                 src="assets/img/footerlink/bullet-icon.svg" /> OUR PARTNERS</a>
-                        <!-- <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
+                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
                                 src="assets/img/footerlink/bullet-icon.svg" /> HOST & EARN</a>
                         <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
                                 src="assets/img/footerlink/bullet-icon.svg" /> EV READY</a>
                         <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
-                                src="assets/img/footerlink/bullet-icon.svg" /> CUSTOM OEM</a> -->
+                                src="assets/img/footerlink/bullet-icon.svg" /> CUSTOM OEM</a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-12 ">
