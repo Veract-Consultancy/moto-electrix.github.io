@@ -106,7 +106,10 @@ function AddProducts() {
                 }
             }
         }
-        document.getElementById("chargerContent").innerHTML = chargerProductHtml;
+        const chargerContentElement = document.getElementById("chargerContent");
+        if (chargerContentElement) {
+            chargerContentElement.innerHTML = chargerProductHtml;
+        }
 
     }
 }

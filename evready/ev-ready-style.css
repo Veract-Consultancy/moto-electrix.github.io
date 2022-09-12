@@ -15,6 +15,17 @@
 }
 
 .me-border-color {
-    border-color: rgba(114, 114, 114, 1) !important;
+  border-color: rgba(114, 114, 114, 1) !important;
 }
 
+.charge-station-pic {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  max-height: 85px;
+}
+
+.charge-station-pic:hover {
+  box-shadow: 0 0 2px 1px var(--me-accent-color);
+}
