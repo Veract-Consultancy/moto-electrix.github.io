@@ -1,0 +1,20 @@
+:root {
+  --me-accent-color: rgba(111, 194, 22, 1);
+  --me-accent-active-color: #ffc000e8;
+  --header-height: calc(72.5px + 1rem);
+}
+
+#evready-landing {
+  margin-top: var(--header-height) !important;
+  min-height: calc(100vh - var(--header-height));
+  background-image: url("assets/img/evreading-landing-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.me-border-color {
+    border-color: rgba(114, 114, 114, 1) !important;
+}
+
