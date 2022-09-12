@@ -39,6 +39,7 @@
 
 .charge-station-pic:hover {
   box-shadow: 0 0 2px 1px var(--me-accent-color);
+  cursor: pointer;
 }
 
 .modal-content {
