@@ -153,6 +153,10 @@ body {
   color: var(--me-accent-active-color) !important;
 }
 
+.me-green-color {
+  color: rgba(80, 208, 116, 1) !important;
+}
+
 .fs-7 {
   font-size: 0.875rem;
 }
@@ -167,6 +171,10 @@ body {
 
 .mb-n1 {
   margin-bottom: -0.875rem;
+}
+
+.mt-n1 {
+  margin-top: 1rem;
 }
 
 @keyframes float {
@@ -229,6 +237,10 @@ body {
 .home-product-text .ev-content {
   color: rgba(255, 255, 255, 0.5);
   font-family: Exo;
+}
+
+.home-product-text .ev-content-highlight {
+  
 }
 
 .carousel-control-prev-icon {
