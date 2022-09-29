@@ -239,10 +239,6 @@ body {
   font-family: Exo;
 }
 
-.home-product-text .ev-content-highlight {
-  
-}
-
 .carousel-control-prev-icon {
   background-image: url("../assets/img/common/prev_icon.svg");
 }
@@ -280,9 +276,9 @@ body {
   box-shadow: none;
 }
 
-.distinctiveproduts .accordion-button::after {
+/* .distinctiveproduts .accordion-button::after {
   background-image: none;
-}
+} */
 
 .distinctiveproduts .product-group {
   background-color: rgba(0, 0, 0, 0.5);
@@ -482,25 +478,23 @@ input:not(:focus):valid ~ .floating-label {
   transition: opacity, transform 1s ease-in-out !important;
 }
 
-/* 
-.carousel-fade {
-  .carousel-item {
-    opacity: 0;
-    transition-property: opacity;
-    transform: none;
-  }
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: "";
+  background-image: url("../assets/img/common/chevron_down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform 0.2s ease-in-out;
+  /* background-image: url("../assets/img/common/next_icon.svg");
+  transform: rotate(90deg); */
+}
 
-  .carousel-item.active,
-  .carousel-item-next.carousel-item-start,
-  .carousel-item-prev.carousel-item-end {
-    z-index: 1;
-    opacity: 1;
-  }
-
-  .active.carousel-item-start,
-  .active.carousel-item-end {
-    z-index: 0;
-    opacity: 0;
-    @include transition(opacity 0s $carousel-transition-duration);
-  }
-} */
+.accordion-button:not(.collapsed)::after {
+  /* background-image: url("../assets/img/common/next_icon.svg");
+  transform: rotate(-90deg); */
+  background-image: url("../assets/img/common/chevron_down.svg");
+  transform: rotate(180deg); 
+}

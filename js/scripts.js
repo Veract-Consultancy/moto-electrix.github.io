@@ -97,7 +97,11 @@ function AddProducts() {
                 if ((i + 1) > chargerProducts.length) {
                     chargerProductHtml += "<div class='col'></div>";
                 } else {
-                    chargerProductHtml += productContentTemplate.replace(/{imagePath}/g, chargerProducts[i].imagePath)
+                    let imgPath = chargerProducts[i].imagePath;
+                    if (window.location.pathname.indexOf('evready') > -1) {
+                        imgPath = `../${imgPath}`;
+                    }
+                    chargerProductHtml += productContentTemplate.replace(/{imagePath}/g, imgPath)
                         .replace(/{productName}/g, chargerProducts[i].productName)
                         .replace(/{productContent}/g, chargerProducts[i].productContent);
                 }
