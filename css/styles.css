@@ -210,6 +210,10 @@ body {
   animation: float-reverse 4s infinite;
 }
 
+.me-border {
+  border: 1px solid var(--me-accent-active-color);
+}
+
 .me-border-bottom {
   border-bottom: 1px solid var(--me-accent-active-color);
 }
