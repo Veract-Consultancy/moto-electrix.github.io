@@ -7,20 +7,20 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Moto Electrix</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    </script>
 </head>
 
 <body id="page-top">
-    <div class="pt-5 d-lg-block d-none"></div>
     <div class="d-lg-none" style="padding-top: 2.25rem;"></div>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg py-1 navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container px-4 px-lg-2">
-            <a class="navbar-brand" href="#page-top">
-                <img loading="lazy" width="108px" class="d-lg-none" src="assets/img/home/ME_Logo.png" alt=" ">
+            <a class="navbar-brand" href="../">
+                <img loading="lazy" width="108px" src="../assets/img/home/ME_Logo.png" alt=" ">
             </a>
             <button class="navbar-toggler navbar-toggler-right mobile-hamburger-button" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
@@ -34,9 +34,9 @@
                     <!-- <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#partners">Our
                             Partners</a></li>
                     <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#hostearn">Host &
-                            Earn</a></li>
-                    <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#evready">EV Ready</a>
-                    </li> -->
+                            Earn</a></li> -->
+                    <li class="nav-item pe-2"><a class="nav-link me-yellow-color text-uppercase">EV Ready Properties</a>
+                    </li>
                     <li class="nav-item pe-2"><a class="nav-link me-color text-uppercase" href="#contacts">Contact
                             Us</a>
                     </li>
@@ -45,251 +45,352 @@
         </div>
     </nav>
 
-    <!-- Products Desktop-->
-    <section id="product-desktop" class="position-relative pt-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 py-2">
-                    <div class="col d-none d-lg-block">
-                        <img loading="lazy" width="195px" class="ps-5" src="assets/img/home/ME_Logo.png" alt=" ">
-                    </div>
-                    <div>
-                        <div id="homeCarousel" class="carousel slide me-custom-transition" data-interval="0"
-                            data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active" data-bs-interval="2000">
-                                    <div class="container-fluid w-100 home-banner home-banner-image-1">
-                                    </div>
-                                </div>
-                                <div class="carousel-item" data-bs-interval="2000">
-                                    <div class="container-fluid w-100 home-banner home-banner-image-2">
-                                    </div>
-                                </div>
-                                <div class="carousel-item" data-bs-interval="2000">
-                                    <div class="container-fluid w-100 home-banner home-banner-image-3">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-12 py-2">
-                    <div class="d-grid px-5 py-3 h-100 home-product-text">
-                        <div class="my-auto me-secondary-font me-secondary-color">
-                            <i>
-                                <div class="fs-1 mb-n1 fw-bolder ev-title">AUTOMOTIVE POWER ELECTRONIC COMPONENTS </div>
-                                <div class="mt-n1 fs-4 me-yellow-color ev-subtitle">FOR EV & ICE VEHICLES</div>
-                                <!-- <p class="fw-light ev-content">
-                                    
-                                </p> -->
-                            </i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-1 col-md-12">
-                    <div class="my-auto row mt-3 h-100">
-                        <div class="col-lg-12 col-3 text-center">
-                            <a href="#products" onclick="showAccordian('charger-collapse-container')"
-                                class="text-decoration-none me-color">
-                                <img loading="lazy" width="50px" src="assets/img/home/charger.svg" alt=" ">
-                                <p style="min-width: 70px;">EV Charging Stations</p>
-                            </a>
-                        </div>
-                        <div class="col-lg-12 col-3 text-center">
-                            <a href="#products" onclick="showAccordian('evcc-collapse-container')"
-                                class="text-decoration-none me-color">
-                                <img loading="lazy" width="50px" src="assets/img/home/vehicle-pilot.svg" alt=" ">
-                                <p>EV Charge Controllers</p>
-                            </a>
-                        </div>
-                        <div class="col-lg-12 col-3 text-center">
-                            <a href="#products" onclick="showAccordian('onboard-charger-collapse-container')"
-                                class="text-decoration-none me-color">
-                                <img loading="lazy" width="50px" src="assets/img/home/user-grounding.svg" alt=" ">
-                                <p>On-board Chargers</p>
-                            </a>
-                        </div>
-                        <div class="col-lg-12 col-3 text-center">
-                            <a href="#products" onclick="showAccordian('dc-dc-converter-collapse-container')"
-                                class="text-decoration-none me-color">
-                                <img loading="lazy" width="50px" src="assets/img/home/vehicle-pilot.svg" alt=" ">
-                                <p>DC-DC converters</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- DISTINCTIVE PRODUCTS-->
-    <section id="products" class="distinctiveproduts anchor-scroll">
-        <nav class="navbar navbar-dark bg-dark w-100">
-            <div class="container">
-                <span class="me-yellow-color mx-auto fs-5 fw-bold">PRODUCTS</span>
-            </div>
-        </nav>
-        <div class="accordion accordion-flush" id="productAccordian">
+    <section id="products" class="distinctiveproduts anchor-scroll" style="margin-top: calc(72.5px + 1rem);">
+        <div class="accordion accordion-flush" id="specificationAccordian">
             <div class="accordion-item mb-1">
-                <h2 class="accordion-header me-color" id="charger-accordian-header">
-                    <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#charger-collapse-container" aria-expanded="false"
-                        aria-controls="charger-collapse-container">
-                        CHARGERS
+                <h2 class="accordion-header me-color" id="wall-charger-accordian-header">
+                    <button class="accordion-button me-secondary-color py-1 ps-5 rounded-0" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#wall-charger-collapse-container"
+                        aria-expanded="false" aria-controls="wall-charger-collapse-container">
+                        Wall charger
                     </button>
                 </h2>
-                <div id="charger-collapse-container" class="accordion-collapse collapse show"
-                    aria-labelledby="charger-accordian-header" data-bs-parent="#productAccordian">
-                    <div class="accordion-body py-5 px-0">
-                        <div id="charger-carousel" class="carousel slide" data-bs-ride="carousel">
-                            <div id="chargerContent" class="carousel-inner">
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#charger-carousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#charger-carousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
+                <div id="wall-charger-collapse-container" class="accordion-collapse collapse show"
+                    aria-labelledby="wall-charger-accordian-header" data-bs-parent="#specificationAccordian">
+                    <div class="accordion-body py-5 px-0 text-center container d-flex justify-content-center">
+                        <table class="table table-responsive-md">
+                            <thead>
+                                <tr>
+                                    <th class="bg-white">Current</th>
+                                    <th class="bg-white me-border">KW</th>
+                                    <th class="bg-white me-border">No Of Sockets</th>
+                                    <th class="bg-white me-border">Type of Socket</th>
+                                    <th class="bg-white me-border">Input Current and Phase </th>
+                                    <th class="bg-white me-border">Name </th>
+                                    <th class="bg-white me-border">Price </th>
+                                    <th class="bg-white me-border">Vehicles of Usage </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="bg-white">AC </td>
+                                    <td class="me-border">1.1</td>
+                                    <td class="me-border">3</td>
+                                    <td class="me-border">AC 3 Pin</td>
+                                    <td class="me-border">1 Phase 16A</td>
+                                    <td class="me-border">Owl</td>
+                                    <td class="me-border">₹ 32306/-</td>
+                                    <td class="me-border">2&3 Wheelers</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bg-white" colspan="8"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bg-white" rowspan="2">AC </td>
+                                    <td class="me-border">3.3</td>
+                                    <td class="me-border">1</td>
+                                    <td class="me-border">AC 3 Pin</td>
+                                    <td class="me-border">1 Phase 16A</td>
+                                    <td class="me-border">Robin</td>
+                                    <td class="me-border">₹ 27980/-</td>
+                                    <td class="me-border">2&3 Wheelers</td>
+                                </tr>
+                                <tr>
+                                    <!-- <td class="bg-white">AC </td> -->
+                                    <td class="me-border">3.3</td>
+                                    <td class="me-border">3</td>
+                                    <td class="me-border">AC 3 Pin</td>
+                                    <td class="me-border">1 Phase 16A</td>
+                                    <td class="me-border">Albatross</td>
+                                    <td class="me-border">₹ 56697/-</td>
+                                    <td class="me-border">2,3&4 Wheelers</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bg-white" colspan="8"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bg-white" rowspan="3">AC </td>
+                                    <td class="me-border">7.4</td>
+                                    <td class="me-border">1</td>
+                                    <td class="me-border">Type 2</td>
+                                    <td class="me-border">1 Phase 32A</td>
+                                    <td class="me-border">Hawk</td>
+                                    <td class="me-border"></td>
+                                    <td class="me-border">4 Wheelers</td>
+                                </tr>
+
+                                <tr>
+                                    <!-- <td class="bg-white">AC </td> -->
+                                    <td class="me-border">7.4</td>
+                                    <td class="me-border">2</td>
+                                    <td class="me-border">Type 2</td>
+                                    <td class="me-border">3 Phase 32A</td>
+                                    <td class="me-border">Eagle</td>
+                                    <td class="me-border">₹ 98860/-</td>
+                                    <td class="me-border">4 Wheelers</td>
+                                </tr>
+
+                                <tr>
+                                    <!-- <td class="bg-white">AC </td> -->
+                                    <td class="me-border">7.4</td>
+                                    <td class="me-border">2</td>
+                                    <td class="me-border">Type 2</td>
+                                    <td class="me-border">3 Phase 32A</td>
+                                    <td class="me-border">Hornbil</td>
+                                    <td class="me-border">₹ 117020/-</td>
+                                    <td class="me-border">4 Wheelers</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bg-white" colspan="8"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bg-white">AC </td>
+                                    <td class="me-border">22</td>
+                                    <td class="me-border">1</td>
+                                    <td class="me-border">Type 2</td>
+                                    <td class="me-border">3 Phase 32A</td>
+                                    <td class="me-border">Falcon</td>
+                                    <td class="me-border">₹ 108200/-</td>
+                                    <td class="me-border">4 Wheelers</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bg-white" colspan="8"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bg-white">DC </td>
+                                    <td class="me-border">30</td>
+                                    <td class="me-border">2</td>
+                                    <td class="me-border">CCS2</td>
+                                    <td class="me-border">3 Phase 45A/Phase</td>
+                                    <td class="me-border">Pelican</td>
+                                    <td class="me-border">₹ 574085/-</td>
+                                    <td class="me-border">4 Wheelers</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bg-white" colspan="8"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bg-white">DC </td>
+                                    <td class="me-border">60</td>
+                                    <td class="me-border">2</td>
+                                    <td class="me-border">CCS2</td>
+                                    <td class="me-border">3 Phase 100A/Phase</td>
+                                    <td class="me-border">Pelican pro</td>
+                                    <td class="me-border">₹ 1018760/-</td>
+                                    <td class="me-border">4 Wheelers</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
             <div class="accordion-item mb-1">
-                <h2 class="accordion-header me-color" id="evcc-accordian-header">
+                <h2 class="accordion-header me-color" id="obc-accordian-header">
                     <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#evcc-collapse-container" aria-expanded="false"
-                        aria-controls="evcc-collapse-container">
-                        EV - CHARGE CONTROLLER
+                        data-bs-toggle="collapse" data-bs-target="#obc-collapse-container" aria-expanded="false"
+                        aria-controls="obc-collapse-container">
+                        OBC
                     </button>
                 </h2>
-                <div id="evcc-collapse-container" class="accordion-collapse collapse"
-                    aria-labelledby="evcc-accordian-header" data-bs-parent="#productAccordian">
-                    <div class="accordion-body py-5 px-0">
-                        <div id="evcc-carousel" class="carousel slide" data-bs-ride="carousel">
-                            <div id="evccContent" class="carousel-inner">
-                                <div class="container-fluid">
-                                    <div class="row mx-auto border rounded-4 product-group">
-                                        <div class="col-lg-6 col-md-12 text-center my-auto">
-                                            <img style="width: 100%; max-width: 300px;"
-                                                src="assets/img/distinctiveproducts/evcc/evcc_prototype.png" alt="...">
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 p-0">
-                                            <div
-                                                class="d-grid px-5 py-3 h-100 product-text me-secondary-font me-secondary-color border rounded-4">
-                                                <div class="my-auto">
-                                                    <h5 class="d-inline me-border-bottom me-secondary-color mb-3">EV -
-                                                        Charge
-                                                        Controller</h5>
-                                                    <br />
-                                                    <br />
-                                                    <p class="fs-6">PLC communication modem
-                                                        installed in EV in conformity with
-                                                        the global standard(ISO/IEC
-                                                        15118 and DIN 70121) for AC/DC charging.
-                                                    </p>
-                                                    <p>
-                                                        Functions such information as
-                                                        charging sequence, charging,
-                                                        user authentication.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div id="obc-collapse-container" class="accordion-collapse collapse"
+                    aria-labelledby="obc-accordian-header" data-bs-parent="#specificationAccordian">
+                    <div class="accordion-body py-5 px-0 text-center container d-flex justify-content-center">
+                        <table class="table table-responsive-md">
+                            <thead>
+                                <tr>
+                                    <th class="bg-white me-border">Model No </th>
+                                    <th class="bg-white me-border">Input Voltage Range </th>
+                                    <th class="bg-white me-border">Rated Output Voltage</th>
+                                    <th class="bg-white me-border">Max Output Voltage</th>
+                                    <th class="bg-white me-border">Max Output Current</th>
+                                    <th class="bg-white me-border">Cooling</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="bg-white me-border">4842</td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">48V</td>
+                                    <td class="me-border">66V</td>
+                                    <td class="me-border">42A</td>
+                                    <td class="me-border">Air</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">6040 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">60V </td>
+                                    <td class="me-border">82.5V </td>
+                                    <td class="me-border">40A </td>
+                                    <td class="me-border">Air</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">7240 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">72V </td>
+                                    <td class="me-border">99V </td>
+                                    <td class="me-border">40A </td>
+                                    <td class="me-border">Air</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">8440 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">84V </td>
+                                    <td class="me-border">116V </td>
+                                    <td class="me-border">40A </td>
+                                    <td class="me-border">Air</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">9632 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">96V </td>
+                                    <td class="me-border">132V </td>
+                                    <td class="me-border">32A </td>
+                                    <td class="me-border">Air</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">12025 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">120V </td>
+                                    <td class="me-border">165V </td>
+                                    <td class="me-border">25A </td>
+                                    <td class="me-border">Air</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">14423 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">144V </td>
+                                    <td class="me-border">198V </td>
+                                    <td class="me-border">23A </td>
+                                    <td class="me-border">Air</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">31210 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">312V </td>
+                                    <td class="me-border">440V </td>
+                                    <td class="me-border">10A </td>
+                                    <td class="me-border">Air</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">14446 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">144V </td>
+                                    <td class="me-border">198V </td>
+                                    <td class="me-border">46A </td>
+                                    <td class="me-border">Liquid</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">31220 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">312V </td>
+                                    <td class="me-border">440V </td>
+                                    <td class="me-border">20A </td>
+                                    <td class="me-border">Liquid</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">54014 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">540V </td>
+                                    <td class="me-border">650V </td>
+                                    <td class="me-border">14A </td>
+                                    <td class="me-border">Liquid</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">14446 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">144V </td>
+                                    <td class="me-border">198V </td>
+                                    <td class="me-border">46A </td>
+                                    <td class="me-border">Enforce Air</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">31220 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">312V </td>
+                                    <td class="me-border">440V </td>
+                                    <td class="me-border">20A </td>
+                                    <td class="me-border">Enforce Air</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">54014 </td>
+                                    <td class="me-border">AC 90-264V </td>
+                                    <td class="me-border">540V </td>
+                                    <td class="me-border">650V </td>
+                                    <td class="me-border">14A </td>
+                                    <td class="me-border">Enforce Air</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
             <div class="accordion-item mb-1">
-                <h2 class="accordion-header me-color" id="onboard-charger-accordian-header">
+                <h2 class="accordion-header me-color" id="dc-dc-accordian-header">
                     <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#onboard-charger-collapse-container"
-                        aria-expanded="false" aria-controls="onboard-charger-collapse-container">
-                        ONBOARD CHARGER
+                        data-bs-toggle="collapse" data-bs-target="#dc-dc-collapse-container" aria-expanded="false"
+                        aria-controls="dc-dc-collapse-container">
+                        DC-DC
                     </button>
                 </h2>
-                <div id="onboard-charger-collapse-container" class="accordion-collapse collapse"
-                    aria-labelledby="onboard-charger-accordian-header" data-bs-parent="#productAccordian">
-                    <div class="accordion-body py-5">
-                        <div id="onboard-charger-carousel" class="carousel slide" data-bs-ride="carousel">
-                            <div id="onboard-charger-content" class="carousel-inner">
-                                <div class="container-fluid">
-                                    <div class="row mx-auto border rounded-4 product-group">
-                                        <div class="col-lg-6 col-md-12 text-center my-auto">
-                                            <img style="width: 100%; max-width: 300px;"
-                                                src="assets/img/distinctiveproducts/onboardcharger/onboard_charger_prototype.png"
-                                                alt="...">
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 p-0">
-                                            <div
-                                                class="d-grid px-5 py-3 h-100 product-text me-secondary-font me-secondary-color border rounded-4">
-                                                <div class="my-auto">
-                                                    <h5 class="d-inline me-border-bottom me-secondary-color mb-3">
-                                                        Onboard charger
-                                                    </h5>
-                                                    <br />
-                                                    <br />
-                                                    <p>Ac Input Wide Voltage，Range: AC90V~264V</p>
-                                                    <p>AC Input Frequency Range: 40~70Hz</p>
-                                                    <p>With APFC function，Power Factor:≥ 0.98</p>
-                                                    <p>Soft Switching Technology，Efficiency:≥ 93.0%</p>
-                                                    <p>Protection Level: IP67</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header me-color" id="dc-dc-converter-accordian-header">
-                    <button class="accordion-button me-secondary-color py-1 collapsed ps-5 rounded-0" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#dc-dc-converter-collapse-container"
-                        aria-expanded="false" aria-controls="dc-dc-converter-collapse-container">
-                        DC-DC CONVERTER
-                    </button>
-                </h2>
-                <div id="dc-dc-converter-collapse-container" class="accordion-collapse collapse"
-                    aria-labelledby="dc-dc-converter-accordian-header" data-bs-parent="#productAccordian">
-                    <div class="accordion-body py-5">
-                        <div id="dc-dc-converter-carousel" class="carousel slide" data-bs-ride="carousel">
-                            <div id="dc-dc-converter-content" class="carousel-inner">
-                                <div class="container-fluid">
-                                    <div class="row mx-auto border rounded-4 product-group">
-                                        <div class="col-lg-6 col-md-12 text-center my-auto">
-                                            <img style="width: 100%; max-width: 300px;"
-                                                src="assets/img/distinctiveproducts/dc-dc-converter/DCDC_3D_NoBG.png"
-                                                alt="...">
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 p-0">
-                                            <div
-                                                class="d-grid px-5 py-3 h-100 product-text me-secondary-font me-secondary-color border rounded-4">
-                                                <div class="my-auto">
-                                                    <h5 class="d-inline me-border-bottom me-secondary-color mb-3">
-                                                        DC-DC convertor
-                                                    </h5>
-                                                    <br />
-                                                    <br />
-                                                    <p>A complete line of high quality DC/DC converters in a compact
-                                                        housing.</p>
-                                                    <p>Setup and Stepdown.</p>
-                                                    <p>Output current capability ranging from 1 Amps to 150 Amps.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div id="dc-dc-collapse-container" class="accordion-collapse collapse"
+                    aria-labelledby="dc-dc-accordian-header" data-bs-parent="#specificationAccordian">
+                    <div class="accordion-body py-5 text-center container d-flex justify-content-center">
+                        <table class="table table-responsive-md">
+                            <thead>
+                                <tr>
+                                    <th>
+                                    </th>
+                                    <th class="bg-white me-border">
+                                        Input range
+                                    </th>
+                                    <th class="bg-white me-border">
+                                        Output range
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="bg-white me-border">
+                                        Stepdown
+                                    </td>
+                                    <td class="me-border">
+                                        12-72V
+                                    </td>
+                                    <td class="me-border">
+                                        5V-24 V<br />
+                                        1A-200A<br />
+                                        5W-2400W<br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-white me-border">
+                                        Stepup
+                                    </td>
+                                    <td class="me-border">
+                                        5V-24V
+
+                                    </td>
+                                    <td class="me-border">
+                                        12V-48V<br />
+                                        1A-50A<br />
+                                        21W-3600W<br />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -320,15 +421,15 @@
                     <h5 class="me-border-bottom me-secondary-color d-inline mb-2">QUICK LINK</h5>
                     <div class="mt-3">
                         <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
-                                src="assets/img/footerlink/bullet-icon.svg" /> PRODUCTS</a>
+                                src="../assets/img/footerlink/bullet-icon.svg" /> PRODUCTS</a>
                         <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
-                                src="assets/img/footerlink/bullet-icon.svg" /> OUR PARTNERS</a>
+                                src="../assets/img/footerlink/bullet-icon.svg" /> OUR PARTNERS</a>
+                        <!-- <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
+                                src="../assets/img/footerlink/bullet-icon.svg" /> HOST & EARN</a>
                         <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
-                                src="assets/img/footerlink/bullet-icon.svg" /> HOST & EARN</a>
+                                src="../assets/img/footerlink/bullet-icon.svg" /> EV READY</a>
                         <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
-                                src="assets/img/footerlink/bullet-icon.svg" /> EV READY PROPERTIES</a>
-                        <a class="d-block pb-2 text-decoration-none me-color" role="button"><img loading="lazy"
-                                src="assets/img/footerlink/bullet-icon.svg" /> CUSTOM OEM</a>
+                                src="../assets/img/footerlink/bullet-icon.svg" /> CUSTOM OEM</a> -->
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-12 ">
@@ -337,48 +438,48 @@
                     <div class="mt-3 d-lg-block d-none">
                         <a class="d-block pb-2 text-decoration-none me-color" role="button">
                             <img loading="lazy" width="25px" height="25px"
-                                src="assets/img/footerlink/facebook_icon.png" /> Facebook</a>
+                                src="../assets/img/footerlink/facebook_icon.png" /> Facebook</a>
                         <a class="d-block pb-2 text-decoration-none me-color" role="button">
                             <img loading="lazy" width="25px" height="25px"
-                                src="assets/img/footerlink/instagram_icon.png" />
+                                src="../assets/img/footerlink/instagram_icon.png" />
                             Instagram</a>
                         <a class="d-block pb-2 text-decoration-none me-color" role="button">
                             <img loading="lazy" width="25px" height="25px"
-                                src="assets/img/footerlink/twitter_icon.png" /> Twitter</a>
+                                src="../assets/img/footerlink/twitter_icon.png" /> Twitter</a>
                         <a class="d-block pb-2 text-decoration-none me-color" role="button">
                             <img loading="lazy" width="25px" height="25px"
-                                src="assets/img/footerlink/youtube_icon.png" /> YouTube</a>
+                                src="../assets/img/footerlink/youtube_icon.png" /> YouTube</a>
                         <a class="d-block pb-2 text-decoration-none me-color" role="button">
                             <img loading="lazy" width="25px" height="25px"
-                                src="assets/img/footerlink/whatsapp_icon.png" /> WhatsApp</a>
+                                src="../assets/img/footerlink/whatsapp_icon.png" /> WhatsApp</a>
                     </div>
                     <!-- show only in mobile -->
                     <div class="my-3 d-lg-none">
                         <a class="pe-1 text-decoration-none me-color" role="button">
                             <img loading="lazy" width="25px" height="25px"
-                                src="assets/img/footerlink/facebook_icon.png" />
+                                src="../assets/img/footerlink/facebook_icon.png" />
                         </a>
                         <a class="pe-1 text-decoration-none me-color" role="button">
                             <img loading="lazy" width="25px" height="25px"
-                                src="assets/img/footerlink/instagram_icon.png" />
+                                src="../assets/img/footerlink/instagram_icon.png" />
                         </a>
                         <a class="pe-1 text-decoration-none me-color" role="button">
                             <img loading="lazy" width="25px" height="25px"
-                                src="assets/img/footerlink/twitter_icon.png" />
+                                src="../assets/img/footerlink/twitter_icon.png" />
                         </a>
                         <a class="pe-1 text-decoration-none me-color" role="button">
                             <img loading="lazy" width="25px" height="25px"
-                                src="assets/img/footerlink/youtube_icon.png" />
+                                src="../assets/img/footerlink/youtube_icon.png" />
                         </a>
                         <a class="pe-1 text-decoration-none me-color" role="button">
                             <img loading="lazy" width="25px" height="25px"
-                                src="assets/img/footerlink/whatsapp_icon.png" />
+                                src="../assets/img/footerlink/whatsapp_icon.png" />
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 d-none d-lg-block">
                     <img loading="lazy" width="100%" height="100%" style="opacity: 0.2;"
-                        src="assets/img/footerlink/logo_saturated.png" alt="" />
+                        src="../assets/img/footerlink/logo_saturated.png" alt="" />
                 </div>
             </div>
         </div>
@@ -411,7 +512,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 
 </html>
