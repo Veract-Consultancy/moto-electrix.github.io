@@ -37,8 +37,8 @@
   position: relative;
   display: inline-block;
   color: #fff;
-  animation: blur 1s infinite;
-  animation-delay: calc(0.1s * var(--i));
+  /* animation: blur 1s infinite;
+  animation-delay: calc(0.1s * var(--i)); */
 }
 @keyframes waviy {
   0%,
