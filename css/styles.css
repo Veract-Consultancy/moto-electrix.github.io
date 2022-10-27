@@ -280,9 +280,9 @@ body {
   box-shadow: none;
 }
 
-/* .distinctiveproduts .accordion-button::after {
+.distinctiveproduts .accordion-button::after {
   background-image: none;
-} */
+}
 
 .distinctiveproduts .product-group {
   background-color: rgba(0, 0, 0, 0.5);
