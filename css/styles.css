@@ -482,7 +482,7 @@ input:not(:focus):valid ~ .floating-label {
   transition: opacity, transform 1s ease-in-out !important;
 }
 
-.accordion-button::after {
+/* .accordion-button::after {
   flex-shrink: 0;
   width: 1.25rem;
   height: 1.25rem;
@@ -492,13 +492,9 @@ input:not(:focus):valid ~ .floating-label {
   background-repeat: no-repeat;
   background-size: contain;
   transition: transform 0.2s ease-in-out;
-  /* background-image: url("../assets/img/common/next_icon.svg");
-  transform: rotate(90deg); */
-}
+} */
 
-.accordion-button:not(.collapsed)::after {
-  /* background-image: url("../assets/img/common/next_icon.svg");
-  transform: rotate(-90deg); */
+/* .accordion-button:not(.collapsed)::after {
   background-image: url("../assets/img/common/chevron_down.svg");
   transform: rotate(180deg); 
-}
+} */
